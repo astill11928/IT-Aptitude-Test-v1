@@ -1,0 +1,118 @@
+{
+    "Computer Support": {
+        "Beginner": {
+            "Focus On": "Foundational troubleshooting, hardware basics, and customer service skills.",
+            "Certifications to Explore": [
+                "CompTIA IT Fundamentals+ (ITF+)",
+                "Google IT Support Professional Certificate"
+            ],
+            "Job Titles to Target": [
+                "Help Desk Intern",
+                "IT Assistant",
+                "Technical Support Trainee"
+            ]
+        },
+        "Intermediate": {
+            "Focus On": "Mastering operating systems, endpoint management, and resolving Tier 2 support issues.",
+            "Certifications to Explore": [
+                "CompTIA A+",
+                "CompTIA Network+"
+            ],
+            "Job Titles to Target": [
+                "Help Desk Technician (Tier 1/2)",
+                "IT Support Specialist",
+                "Desktop Support Analyst"
+            ]
+        },
+        "Advanced": {
+            "Focus On": "System administration, scripting for automation (PowerShell/Bash), and infrastructure support.",
+            "Certifications to Explore": [
+                "Microsoft 365 Certified: Endpoint Administrator Associate",
+                "CompTIA Linux+"
+            ],
+            "Job Titles to Target": [
+                "Senior Help Desk Analyst",
+                "Junior System Administrator",
+                "IT Team Lead"
+            ]
+        }
+    },
+    "Networking": {
+        "Beginner": {
+            "Focus On": "Learning the fundamentals of the OSI model, IP addressing, and common network protocols.",
+            "Certifications to Explore": [
+                "CompTIA Network+"
+            ],
+            "Job Titles to Target": [
+                "NOC Technician (Trainee)",
+                "Junior Network Technician",
+                "Data Center Technician"
+            ]
+        },
+        "Intermediate": {
+            "Focus On": "Configuring switches and routers, implementing VLANs, and understanding network security principles.",
+            "Certifications to Explore": [
+                "CompTIA Security+",
+                "CCNA (Cisco Certified Network Associate)"
+            ],
+            "Job Titles to Target": [
+                "Network Administrator",
+                "Network Engineer",
+                "Systems Administrator"
+            ]
+        },
+        "Advanced": {
+            "Focus On": "Designing and securing complex networks, advanced routing protocols (BGP, OSPF), and network automation.",
+            "Certifications to Explore": [
+                "CompTIA PenTest+",
+                "CompTIA CASP+",
+                "CCNP (Cisco Certified Network Professional)"
+            ],
+            "Job Titles to Target": [
+                "Senior Network Engineer",
+                "Network Architect",
+                "Cybersecurity Analyst (with network focus)"
+            ]
+        }
+    },
+    "Cloud Computing": {
+        "Beginner": {
+            "Focus On": "Understanding core cloud concepts (IaaS, PaaS, SaaS), the value proposition of cloud, and major services.",
+            "Certifications to Explore": [
+                "CompTIA Cloud Essentials+",
+                "AWS Certified Cloud Practitioner",
+                "Microsoft Certified: Azure Fundamentals (AZ-900)"
+            ],
+            "Job Titles to Target": [
+                "Cloud Intern",
+                "Technical Support (with cloud focus)",
+                "Junior Cloud Practitioner"
+            ]
+        },
+        "Intermediate": {
+            "Focus On": "Deploying and managing resources in a specific cloud (AWS, Azure, GCP), including virtual machines, storage, and basic networking.",
+            "Certifications to Explore": [
+                "AWS Certified Solutions Architect – Associate",
+                "Microsoft Certified: Azure Administrator Associate"
+            ],
+            "Job Titles to Target": [
+                "Cloud Administrator",
+                "Cloud Engineer",
+                "Junior DevOps Engineer"
+            ]
+        },
+        "Advanced": {
+            "Focus On": "Infrastructure as Code (IaC) with tools like Terraform, automation, CI/CD pipelines, and designing resilient, scalable architectures.",
+            "Certifications to Explore": [
+                "AWS Certified DevOps Engineer – Professional",
+                "Microsoft Certified: DevOps Engineer Expert",
+                "Certified Kubernetes Administrator (CKA)"
+            ],
+            "Job Titles to Target": [
+                "Senior Cloud Engineer",
+                "Cloud Architect",
+                "DevOps Specialist"
+            ]
+        }
+    }
+}
