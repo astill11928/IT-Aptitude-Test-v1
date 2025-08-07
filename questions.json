@@ -177,37 +177,37 @@
     {
         "category": "Network & Security",
         "difficulty": "Advanced",
-        "question": "What is the purpose of Spanning Tree Protocol (STP) in a switched network?",
-        "options": { "a": "To create routing tables", "b": "To prevent switching loops in networks with redundant paths", "c": "To encrypt traffic", "d": "To prioritize voice traffic" },
+        "question": "What is the primary function of an Access Control List (ACL) on a router or firewall?",
+        "options": { "a": "To speed up network performance by caching data", "b": "To permit or deny traffic based on rules like source/destination IP address and port number", "c": "To automatically assign IP addresses to devices", "d": "To create a secure tunnel between two networks" },
         "answer": "b"
     },
     {
         "category": "Network & Security",
         "difficulty": "Advanced",
-        "question": "Which routing protocol is an Exterior Gateway Protocol (EGP) used to connect different autonomous systems on the internet?",
-        "options": { "a": "OSPF", "b": "EIGRP", "c": "RIP", "d": "BGP" },
+        "question": "A user reports slow connectivity to a web server. Which command-line tool is best for identifying network latency and the path packets are taking to the destination?",
+        "options": { "a": "ping", "b": "ipconfig", "c": "netstat", "d": "traceroute (or tracert)" },
         "answer": "d"
     },
     {
         "category": "Network & Security",
         "difficulty": "Advanced",
-        "question": "What is the primary function of an Intrusion Prevention System (IPS)?",
-        "options": { "a": "To log potential threats for later analysis", "b": "To identify and actively block detected threats in real-time", "c": "To authenticate users", "d": "To create secure VPN tunnels" },
-        "answer": "b"
+        "question": "In a corporate environment, which authentication method is commonly used to secure a wireless network by requiring each user to authenticate with unique credentials, often against a RADIUS server?",
+        "options": { "a": "WPA2-PSK (Pre-Shared Key)", "b": "WEP", "c": "WPA2-Enterprise", "d": "WPS" },
+        "answer": "c"
     },
     {
         "category": "Network & Security",
         "difficulty": "Advanced",
-        "question": "What is the principle of 'least privilege' in access control?",
-        "options": { "a": "Giving all users administrator rights", "b": "Giving a user account only the permissions it absolutely needs to perform its function", "c": "Allowing users to choose their own permissions", "d": "Removing all user permissions" },
-        "answer": "b"
+        "question": "What is the term for the process of carrying traffic for multiple VLANs across a single physical link between two switches?",
+        "options": { "a": "Port Mirroring", "b": "Link Aggregation", "c": "Trunking", "d": "Spanning Tree" },
+        "answer": "c"
     },
     {
         "category": "Network & Security",
         "difficulty": "Advanced",
-        "question": "What is a 'zero-day' vulnerability?",
-        "options": { "a": "A vulnerability that has been known for less than 24 hours", "b": "A vulnerability that has been disclosed but not yet patched by the vendor", "c": "A vulnerability that only exists on the first day a system is online", "d": "A vulnerability with zero impact" },
-        "answer": "b"
+        "question": "Which of the following routing protocols is a dynamic, interior gateway protocol that uses link-state advertisements to build its routing table?",
+        "options": { "a": "BGP", "b": "RIP", "c": "OSPF", "d": "A static route" },
+        "answer": "c"
     },
     {
         "category": "Cloud Engineering",
