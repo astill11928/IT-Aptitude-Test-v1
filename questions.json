@@ -29,9 +29,16 @@
     },
     {
         "category": "IT Operations & Support",
+        "difficulty": "Beginner",
+        "question": "What type of common peripheral device uses a USB port?",
+        "options": { "a": "Internal Hard Drive", "b": "RAM Module", "c": "Keyboard", "d": "CPU" },
+        "answer": "c"
+    },
+    {
+        "category": "IT Operations & Support",
         "difficulty": "Intermediate",
         "question": "A user's computer issues a 'BOOTMGR is missing' error. This error is related to which part of the system?",
-        "options": { "a": "The RAM modules", "b": "The network card", "c": "The hard drive's boot sector", "d": "The power supply" },
+        "options": { "a": "The RAM modules", "b": "The network card", "c": "The hard drive's boot sector or Master Boot Record (MBR)", "d": "The power supply" },
         "answer": "c"
     },
     {
@@ -52,8 +59,15 @@
         "category": "IT Operations & Support",
         "difficulty": "Intermediate",
         "question": "What is the most efficient method for deploying a standard set of software to 100 new computers?",
-        "options": { "a": "Manually install from a USB on each machine", "b": "Use an imaging or endpoint management tool", "c": "Email the installers to the users", "d": "Download the software on each computer individually" },
+        "options": { "a": "Manually install from a USB on each machine", "b": "Use an imaging or endpoint management tool like SCCM/Intune", "c": "Email the installers to the users", "d": "Download the software on each computer individually" },
         "answer": "b"
+    },
+    {
+        "category": "IT Operations & Support",
+        "difficulty": "Intermediate",
+        "question": "Which of the following is a key difference between an HDD and an SSD?",
+        "options": { "a": "HDDs use flash memory, while SSDs have moving platters", "b": "SSDs are generally slower than HDDs", "c": "SSDs have no moving parts and offer faster data access", "d": "HDDs are more resistant to physical shock" },
+        "answer": "c"
     },
     {
         "category": "IT Operations & Support",
@@ -73,7 +87,7 @@
         "category": "IT Operations & Support",
         "difficulty": "Advanced",
         "question": "A hard drive is making a repetitive clicking noise. What is the best immediate course of action?",
-        "options": { "a": "Run a disk check utility", "b": "Power down the system to prevent further damage", "c": "Shake the drive to unstick the heads", "d": "Continue using the computer and back up the data" },
+        "options": { "a": "Run a disk check utility", "b": "Power down the system to prevent further damage and consult a data recovery service", "c": "Shake the drive to unstick the heads", "d": "Continue using the computer and back up the data" },
         "answer": "b"
     },
     {
@@ -82,6 +96,13 @@
         "question": "What is the role of a hypervisor (Type 1) in a server environment?",
         "options": { "a": "To manage user permissions", "b": "To run directly on the server hardware to create and manage virtual machines", "c": "To filter network traffic", "d": "An application that runs on top of an existing OS" },
         "answer": "b"
+    },
+    {
+        "category": "IT Operations & Support",
+        "difficulty": "Advanced",
+        "question": "When decommissioning a workstation, what is the most secure method to ensure data on a hard drive is unrecoverable?",
+        "options": { "a": "Standard format of the drive", "b": "Deleting the files", "c": "Using a degausser or physical destruction", "d": "Reinstalling the operating system" },
+        "answer": "c"
     },
     {
         "category": "Network & Security",
@@ -109,6 +130,13 @@
         "difficulty": "Beginner",
         "question": "Which of the following is a best practice for creating a strong password?",
         "options": { "a": "Using a short, easy-to-remember word", "b": "Reusing the same password across multiple sites", "c": "Using a mix of upper/lower case letters, numbers, and symbols", "d": "Writing it down on a sticky note" },
+        "answer": "c"
+    },
+    {
+        "category": "Network & Security",
+        "difficulty": "Beginner",
+        "question": "Which command-line tool is used to test connectivity to another device on a network?",
+        "options": { "a": "ipconfig", "b": "netstat", "c": "ping", "d": "tracert" },
         "answer": "c"
     },
     {
@@ -141,9 +169,16 @@
     },
     {
         "category": "Network & Security",
+        "difficulty": "Intermediate",
+        "question": "Which wireless security protocol is the most secure for modern networks?",
+        "options": { "a": "WEP", "b": "WPA", "c": "WPA2", "d": "WPS" },
+        "answer": "c"
+    },
+    {
+        "category": "Network & Security",
         "difficulty": "Advanced",
         "question": "What is the purpose of Spanning Tree Protocol (STP) in a switched network?",
-        "options": { "a": "To create routing tables", "b": "To prevent switching loops", "c": "To encrypt traffic", "d": "To prioritize voice traffic" },
+        "options": { "a": "To create routing tables", "b": "To prevent switching loops in networks with redundant paths", "c": "To encrypt traffic", "d": "To prioritize voice traffic" },
         "answer": "b"
     },
     {
@@ -165,6 +200,13 @@
         "difficulty": "Advanced",
         "question": "What is the principle of 'least privilege' in access control?",
         "options": { "a": "Giving all users administrator rights", "b": "Giving a user account only the permissions it absolutely needs to perform its function", "c": "Allowing users to choose their own permissions", "d": "Removing all user permissions" },
+        "answer": "b"
+    },
+    {
+        "category": "Network & Security",
+        "difficulty": "Advanced",
+        "question": "What is a 'zero-day' vulnerability?",
+        "options": { "a": "A vulnerability that has been known for less than 24 hours", "b": "A vulnerability that has been disclosed but not yet patched by the vendor", "c": "A vulnerability that only exists on the first day a system is online", "d": "A vulnerability with zero impact" },
         "answer": "b"
     },
     {
@@ -197,6 +239,13 @@
     },
     {
         "category": "Cloud Engineering",
+        "difficulty": "Beginner",
+        "question": "Which service model best describes a fully managed application like Gmail or Salesforce?",
+        "options": { "a": "IaaS", "b": "PaaS", "c": "SaaS", "d": "FaaS" },
+        "answer": "c"
+    },
+    {
+        "category": "Cloud Engineering",
         "difficulty": "Intermediate",
         "question": "What is the primary purpose of a Virtual Private Cloud (VPC)?",
         "options": { "a": "To provide a direct physical connection to the cloud", "b": "To create a logically isolated section of the public cloud", "c": "To manage user identities", "d": "To automatically scale applications" },
@@ -225,6 +274,13 @@
     },
     {
         "category": "Cloud Engineering",
+        "difficulty": "Intermediate",
+        "question": "What is a Load Balancer used for?",
+        "options": { "a": "To increase the storage capacity of a server", "b": "To distribute incoming network traffic across multiple servers", "c": "To secure the network from attacks", "d": "To back up data" },
+        "answer": "b"
+    },
+    {
+        "category": "Cloud Engineering",
         "difficulty": "Advanced",
         "question": "What is 'Infrastructure as Code' (IaC)?",
         "options": { "a": "Writing application code that runs on any infrastructure", "b": "Managing and provisioning infrastructure through machine-readable definition files", "c": "Manually configuring servers using a GUI", "d": "A type of hardware programmed with code" },
@@ -250,6 +306,13 @@
         "question": "What is the main goal of a 'CI/CD pipeline' in a cloud environment?",
         "options": { "a": "To manually test and deploy code monthly", "b": "To automate the process of building, testing, and deploying applications", "c": "To monitor security infrastructure", "d": "To manage billing and costs" },
         "answer": "b"
+    },
+    {
+        "category": "Cloud Engineering",
+        "difficulty": "Advanced",
+        "question": "What is the role of a tool like Terraform or CloudFormation?",
+        "options": { "a": "To monitor application performance", "b": "To write application logic", "c": "To define and provision infrastructure as code", "d": "To scan for security vulnerabilities" },
+        "answer": "c"
     },
     {
         "category": "Software Development",
@@ -281,6 +344,13 @@
     },
     {
         "category": "Software Development",
+        "difficulty": "Beginner",
+        "question": "What does a 'function' or 'method' represent in code?",
+        "options": { "a": "A single line of code", "b": "A named, reusable block of code designed to perform a specific task", "c": "A file containing code", "d": "A comment explaining the code" },
+        "answer": "b"
+    },
+    {
+        "category": "Software Development",
         "difficulty": "Intermediate",
         "question": "What is the difference between an 'array' and an 'object' (or dictionary)?",
         "options": { "a": "An array stores multiple values, an object stores one", "b": "An array uses numbered indices, an object uses named keys", "c": "An object is for numbers, an array is for text", "d": "There is no difference" },
@@ -309,6 +379,13 @@
     },
     {
         "category": "Software Development",
+        "difficulty": "Intermediate",
+        "question": "What is the purpose of a `try...catch` block in many programming languages?",
+        "options": { "a": "To run code faster", "b": "To handle errors and exceptions without crashing the program", "c": "To define a loop", "d": "To import external libraries" },
+        "answer": "b"
+    },
+    {
+        "category": "Software Development",
         "difficulty": "Advanced",
         "question": "What is a 'data structure'?",
         "options": { "a": "A specific programming language", "b": "A way of organizing and storing data so that it can be accessed and worked with efficiently", "c": "A type of database", "d": "A software development methodology" },
@@ -317,7 +394,7 @@
     {
         "category": "Software Development",
         "difficulty": "Advanced",
-        "question": "What is the time complexity of a binary search algorithm?",
+        "question": "What is the time complexity of a binary search algorithm on a sorted array?",
         "options": { "a": "O(n)", "b": "O(n^2)", "c": "O(log n)", "d": "O(1)" },
         "answer": "c"
     },
@@ -325,7 +402,7 @@
         "category": "Software Development",
         "difficulty": "Advanced",
         "question": "What is the main purpose of version control software like Git?",
-        "options": { "a": "To compile code into an executable", "b": "To test software for bugs", "c": "To track changes in source code during software development", "d": "To deploy applications to a server" },
+        "options": { "a": "To compile code into an executable", "b": "To test software for bugs", "c": "To track changes in source code and collaborate with others", "d": "To deploy applications to a server" },
         "answer": "c"
     },
     {
@@ -334,6 +411,13 @@
         "question": "What is a 'race condition' in concurrent programming?",
         "options": { "a": "When two programs compete to run faster", "b": "An error where the outcome of a computation depends on the non-deterministic scheduling of concurrent operations", "c": "A security vulnerability in network protocols", "d": "A type of memory leak" },
         "answer": "b"
+    },
+    {
+        "category": "Software Development",
+        "difficulty": "Advanced",
+        "question": "What is a common use case for a message queue (like RabbitMQ or SQS) in a distributed system?",
+        "options": { "a": "To store user passwords securely", "b": "To serve static web content", "c": "To decouple services and manage tasks asynchronously", "d": "To perform database transactions" },
+        "answer": "c"
     },
     {
         "category": "Web Development",
@@ -365,6 +449,13 @@
     },
     {
         "category": "Web Development",
+        "difficulty": "Beginner",
+        "question": "What is the box model in CSS?",
+        "options": { "a": "A model for 3D graphics", "b": "A convention for naming CSS classes", "c": "A model that describes the rectangular boxes generated for elements: content, padding, border, and margin", "d": "A type of JavaScript framework" },
+        "answer": "c"
+    },
+    {
+        "category": "Web Development",
         "difficulty": "Intermediate",
         "question": "What is the 'DOM' in web development?",
         "options": { "a": "Direct Object Model", "b": "Document Object Model", "c": "Data Output Module", "d": "Dynamic Operation Method" },
@@ -393,6 +484,13 @@
     },
     {
         "category": "Web Development",
+        "difficulty": "Intermediate",
+        "question": "What does the `npm` command do in a JavaScript project?",
+        "options": { "a": "It runs the web server", "b": "It is the Node Package Manager, used to install and manage project dependencies", "c": "It compiles JavaScript code", "d": "It styles the web page" },
+        "answer": "b"
+    },
+    {
+        "category": "Web Development",
         "difficulty": "Advanced",
         "question": "What is a 'Single Page Application' (SPA)?",
         "options": { "a": "A website with only one HTML page", "b": "A web application that loads a single HTML page and dynamically updates content as the user interacts with it", "c": "A website that is not responsive", "d": "A website that does not use JavaScript" },
@@ -418,6 +516,14 @@
         "question": "What is the role of a 'bundler' like Webpack or Vite in modern web development?",
         "options": { "a": "To format code according to style guides", "b": "To process and combine modules and assets (like JS, CSS, images) into optimized files for the browser", "c": "To run tests on the code", "d": "To manage user authentication" },
         "answer": "b"
+    },
+    {
+        "category": "Web Development",
+        "difficulty": "Advanced",
+        "question": "What is the concept of 'state' in a frontend application framework like React?",
+        "options": { "a": "The final, deployed version of the application", "b": "A JavaScript object that represents the parts of the app that can change over time", "c": "The CSS styles applied to the components", "d": "The server that hosts the application" },
+        "answer": "b"
     }
 ]
+
 

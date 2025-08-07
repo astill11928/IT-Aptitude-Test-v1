@@ -10,7 +10,7 @@ PROFICIENCY_LEVELS = {
     'Intermediate': (41, 75),
     'Advanced': (76, 100)
 }
-# Updated categories for version 2.0
+# Categories for version 3.0
 CATEGORIES = [
     "IT Operations & Support",
     "Network & Security",
@@ -18,6 +18,7 @@ CATEGORIES = [
     "Software Development",
     "Web Development"
 ]
+QUESTIONS_PER_CATEGORY = 15
 
 # --- Helper Functions ---
 
@@ -69,7 +70,7 @@ def get_user_answer(options):
 
 def run_test(questions):
     """Main function to run the entire aptitude test."""
-    # Initialize scores based on the new categories
+    # Initialize scores based on the categories
     scores = {category: {'correct': 0, 'total': 0} for category in CATEGORIES}
     total_questions_count = len(questions)
 
@@ -98,10 +99,8 @@ def calculate_results(scores):
     """Calculates the final percentages and identifies the strongest area."""
     results = {}
     for category, data in scores.items():
-        # Each category now has 12 questions
-        total_questions_in_category = 12
         if data['total'] > 0:
-            percentage = (data['correct'] / total_questions_in_category) * 100
+            percentage = (data['correct'] / QUESTIONS_PER_CATEGORY) * 100
             results[category] = {
                 'score': round(percentage),
                 'proficiency': get_proficiency_level(percentage)
@@ -130,7 +129,6 @@ def display_report(results, strongest_category, recommendations):
 
     proficiency_of_strongest = results[strongest_category]['proficiency']
     
-    # Check if the strongest category and proficiency exist in recommendations
     if strongest_category in recommendations and proficiency_of_strongest in recommendations[strongest_category]:
         rec = recommendations[strongest_category][proficiency_of_strongest]
 
@@ -156,7 +154,7 @@ if __name__ == "__main__":
     all_recommendations = load_json_data(RECOMMENDATIONS_FILE)
     
     clear_screen()
-    print("Welcome to the Technology Aptitude Test v2.0!")
+    print("Welcome to the Technology Aptitude Test v3.0!")
     print(f"This is a {len(all_questions)}-question multiple-choice test.")
     print("It will help identify your strengths across five key areas of technology.")
     input("\nPress Enter to begin...")
