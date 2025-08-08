@@ -4,12 +4,22 @@ import textwrap
 
 # --- Constants ---
 QUESTIONS_FILE = 'questions.json'
+RECOMMENDATIONS_FILE = 'recommendations.json'
 PROFICIENCY_LEVELS = {
     'Beginner': (0, 40),
     'Intermediate': (41, 75),
     'Advanced': (76, 100)
 }
-RECOMMENDATIONS_FILE = 'recommendations.json'
+# Updated categories for version 1.05
+CATEGORIES = [
+    "IT Operations & Support",
+    "Network Engineering",
+    "Cybersecurity",
+    "Cloud Engineering",
+    "Software Development",
+    "Web Development"
+]
+QUESTIONS_PER_CATEGORY = 12
 
 # --- Helper Functions ---
 
@@ -61,11 +71,8 @@ def get_user_answer(options):
 
 def run_test(questions):
     """Main function to run the entire aptitude test."""
-    scores = {
-        'Computer Support': {'correct': 0, 'total': 0},
-        'Networking': {'correct': 0, 'total': 0},
-        'Cloud Computing': {'correct': 0, 'total': 0}
-    }
+    # Initialize scores based on the new categories
+    scores = {category: {'correct': 0, 'total': 0} for category in CATEGORIES}
     total_questions_count = len(questions)
 
     for i, q_data in enumerate(questions, 1):
@@ -74,13 +81,16 @@ def run_test(questions):
         user_answer = get_user_answer(q_data['options'])
 
         category = q_data['category']
-        scores[category]['total'] += 1
-
-        if user_answer == q_data['answer'].lower():
-            scores[category]['correct'] += 1
-            print("\nCorrect!")
+        if category in scores:
+            scores[category]['total'] += 1
+            if user_answer == q_data['answer'].lower():
+                scores[category]['correct'] += 1
+                print("\nCorrect!")
+            else:
+                print(f"\nIncorrect. The correct answer was {q_data['answer'].upper()}.")
         else:
-            print(f"\nIncorrect. The correct answer was {q_data['answer'].upper()}.")
+            print(f"Warning: Question category '{category}' not found in scores dictionary.")
+
 
         input("\nPress Enter to continue to the next question...")
 
@@ -91,7 +101,7 @@ def calculate_results(scores):
     results = {}
     for category, data in scores.items():
         if data['total'] > 0:
-            percentage = (data['correct'] / data['total']) * 100
+            percentage = (data['correct'] / QUESTIONS_PER_CATEGORY) * 100
             results[category] = {
                 'score': round(percentage),
                 'proficiency': get_proficiency_level(percentage)
@@ -106,9 +116,9 @@ def calculate_results(scores):
 def display_report(results, strongest_category, recommendations):
     """Displays the final aptitude report and recommendations."""
     clear_screen()
-    print("=" * 25)
-    print("  IT Aptitude Report  ")
-    print("=" * 25)
+    print("=" * 30)
+    print("  Technology Aptitude Report  ")
+    print("=" * 30)
     print("\nThis report highlights your areas of strongest aptitude based on your answers.")
     print("It is designed to guide your focus, not as a pass/fail evaluation.\n")
 
@@ -119,16 +129,21 @@ def display_report(results, strongest_category, recommendations):
     print(f"\nYour strongest area appears to be: ** {strongest_category} **\n")
 
     proficiency_of_strongest = results[strongest_category]['proficiency']
-    rec = recommendations[strongest_category][proficiency_of_strongest]
+    
+    if strongest_category in recommendations and proficiency_of_strongest in recommendations[strongest_category]:
+        rec = recommendations[strongest_category][proficiency_of_strongest]
 
-    print("Based on this result, here is a potential path for you to explore:")
-    print(f"\n**Focus On:** {rec['Focus On']}")
-    print("\n**Certifications to Explore:**")
-    for cert in rec['Certifications to Explore']:
-        print(f"  - {cert}")
-    print("\n**Job Titles to Target:**")
-    for title in rec['Job Titles to Target']:
-        print(f"  - {title}")
+        print("Based on this result, here is a potential path for you to explore:")
+        print(f"\n**Focus On:** {rec['Focus On']}")
+        print("\n**Certifications & Skills to Explore:**")
+        for cert in rec['Certifications & Skills to Explore']:
+            print(f"  - {cert}")
+        print("\n**Job Titles to Target:**")
+        for title in rec['Job Titles to Target']:
+            print(f"  - {title}")
+    else:
+        print("Could not retrieve recommendations for your strongest category.")
+
 
     print("\n" + "=" * 50)
     print("\nThank you for taking the test!")
@@ -140,9 +155,9 @@ if __name__ == "__main__":
     all_recommendations = load_json_data(RECOMMENDATIONS_FILE)
     
     clear_screen()
-    print("Welcome to the IT Aptitude Test!")
+    print("Welcome to the Technology Aptitude Test v1.05!")
     print(f"This is a {len(all_questions)}-question multiple-choice test.")
-    print("It will help identify your strengths across different IT domains.")
+    print("It will help identify your strengths across six key areas of technology.")
     input("\nPress Enter to begin...")
     
     final_scores = run_test(all_questions)

@@ -1,118 +1,104 @@
 {
-    "Computer Support": {
+    "IT Operations & Support": {
         "Beginner": {
             "Focus On": "Foundational troubleshooting, hardware basics, and customer service skills.",
-            "Certifications to Explore": [
-                "CompTIA IT Fundamentals+ (ITF+)",
-                "Google IT Support Professional Certificate"
-            ],
-            "Job Titles to Target": [
-                "Help Desk Intern",
-                "IT Assistant",
-                "Technical Support Trainee"
-            ]
+            "Certifications & Skills to Explore": [ "CompTIA ITF+", "CompTIA A+", "Google IT Support Professional Certificate" ],
+            "Job Titles to Target": [ "Help Desk Intern", "IT Assistant", "Technical Support Trainee" ]
         },
         "Intermediate": {
             "Focus On": "Mastering operating systems, endpoint management, and resolving Tier 2 support issues.",
-            "Certifications to Explore": [
-                "CompTIA A+",
-                "CompTIA Network+"
-            ],
-            "Job Titles to Target": [
-                "Help Desk Technician (Tier 1/2)",
-                "IT Support Specialist",
-                "Desktop Support Analyst"
-            ]
+            "Certifications & Skills to Explore": [ "CompTIA Network+", "Microsoft 365 Certified: Endpoint Administrator" ],
+            "Job Titles to Target": [ "Help Desk Technician", "IT Support Specialist", "Desktop Support Analyst" ]
         },
         "Advanced": {
             "Focus On": "System administration, scripting for automation (PowerShell/Bash), and infrastructure support.",
-            "Certifications to Explore": [
-                "Microsoft 365 Certified: Endpoint Administrator Associate",
-                "CompTIA Linux+"
-            ],
-            "Job Titles to Target": [
-                "Senior Help Desk Analyst",
-                "Junior System Administrator",
-                "IT Team Lead"
-            ]
+            "Certifications & Skills to Explore": [ "CompTIA Linux+", "CompTIA Server+", "ITIL Foundation" ],
+            "Job Titles to Target": [ "Senior Support Analyst", "Junior System Administrator", "IT Team Lead" ]
         }
     },
-    "Networking": {
+    "Network Engineering": {
         "Beginner": {
-            "Focus On": "Learning the fundamentals of the OSI model, IP addressing, and common network protocols.",
-            "Certifications to Explore": [
-                "CompTIA Network+"
-            ],
-            "Job Titles to Target": [
-                "NOC Technician (Trainee)",
-                "Junior Network Technician",
-                "Data Center Technician"
-            ]
+            "Focus On": "Learning the fundamentals of the OSI model, IP addressing, and common network devices.",
+            "Certifications & Skills to Explore": [ "CompTIA Network+ (entry level concepts)", "Understanding of TCP/IP" ],
+            "Job Titles to Target": [ "NOC Technician (Trainee)", "Junior Network Technician", "Data Center Technician" ]
         },
         "Intermediate": {
-            "Focus On": "Configuring switches and routers, implementing VLANs, and understanding network security principles.",
-            "Certifications to Explore": [
-                "CompTIA Security+",
-                "CCNA (Cisco Certified Network Associate)"
-            ],
-            "Job Titles to Target": [
-                "Network Administrator",
-                "Network Engineer",
-                "Systems Administrator"
-            ]
+            "Focus On": "Configuring switches and routers, implementing VLANs, and understanding routing protocols.",
+            "Certifications & Skills to Explore": [ "CompTIA Network+ (full certification)", "CCNA (Cisco Certified Network Associate)" ],
+            "Job Titles to Target": [ "Network Administrator", "Network Engineer", "Systems Administrator" ]
         },
         "Advanced": {
-            "Focus On": "Designing and securing complex networks, advanced routing protocols (BGP, OSPF), and network automation.",
-            "Certifications to Explore": [
-                "CompTIA PenTest+",
-                "CompTIA CASP+",
-                "CCNP (Cisco Certified Network Professional)"
-            ],
-            "Job Titles to Target": [
-                "Senior Network Engineer",
-                "Network Architect",
-                "Cybersecurity Analyst (with network focus)"
-            ]
+            "Focus On": "Designing and securing complex networks, advanced routing (BGP, OSPF), and network automation.",
+            "Certifications & Skills to Explore": [ "CCNP (Cisco Certified Network Professional)", "Advanced Python for Networking", "Juniper JNCIA" ],
+            "Job Titles to Target": [ "Senior Network Engineer", "Network Architect", "Solutions Architect" ]
         }
     },
-    "Cloud Computing": {
+    "Cybersecurity": {
+        "Beginner": {
+            "Focus On": "Core security principles (CIA Triad), common threats, and password best practices.",
+            "Certifications & Skills to Explore": [ "CompTIA Security+ (entry level concepts)", "Understanding of malware types" ],
+            "Job Titles to Target": [ "Security Intern", "Junior SOC Analyst", "IT Compliance Assistant" ]
+        },
+        "Intermediate": {
+            "Focus On": "Threat and vulnerability management, security architecture, and identity and access management.",
+            "Certifications & Skills to Explore": [ "CompTIA Security+ (full certification)", "CompTIA PenTest+", "Understanding of SIEM tools" ],
+            "Job Titles to Target": [ "Security Analyst", "Cybersecurity Specialist", "Incident Responder" ]
+        },
+        "Advanced": {
+            "Focus On": "Risk management, governance, compliance, and advanced threat hunting and analysis.",
+            "Certifications & Skills to Explore": [ "CompTIA CySA+", "CompTIA CASP+", "CISSP (Certified Information Systems Security Professional)" ],
+            "Job Titles to Target": [ "Senior Security Analyst", "Cybersecurity Engineer", "Security Architect" ]
+        }
+    },
+    "Cloud Engineering": {
         "Beginner": {
             "Focus On": "Understanding core cloud concepts (IaaS, PaaS, SaaS), the value proposition of cloud, and major services.",
-            "Certifications to Explore": [
-                "CompTIA Cloud Essentials+",
-                "AWS Certified Cloud Practitioner",
-                "Microsoft Certified: Azure Fundamentals (AZ-900)"
-            ],
-            "Job Titles to Target": [
-                "Cloud Intern",
-                "Technical Support (with cloud focus)",
-                "Junior Cloud Practitioner"
-            ]
+            "Certifications & Skills to Explore": [ "CompTIA Cloud+", "AWS Certified Cloud Practitioner", "Azure Fundamentals (AZ-900)" ],
+            "Job Titles to Target": [ "Cloud Intern", "Technical Support (with cloud focus)", "Junior Cloud Practitioner" ]
         },
         "Intermediate": {
-            "Focus On": "Deploying and managing resources in a specific cloud (AWS, Azure, GCP), including virtual machines, storage, and basic networking.",
-            "Certifications to Explore": [
-                "AWS Certified Solutions Architect – Associate",
-                "Microsoft Certified: Azure Administrator Associate"
-            ],
-            "Job Titles to Target": [
-                "Cloud Administrator",
-                "Cloud Engineer",
-                "Junior DevOps Engineer"
-            ]
+            "Focus On": "Deploying and managing resources in a specific cloud (AWS, Azure, GCP), including VMs, storage, and basic networking.",
+            "Certifications & Skills to Explore": [ "AWS Certified Solutions Architect – Associate", "Microsoft Certified: Azure Administrator Associate" ],
+            "Job Titles to Target": [ "Cloud Administrator", "Cloud Engineer", "Junior DevOps Engineer" ]
         },
         "Advanced": {
-            "Focus On": "Infrastructure as Code (IaC) with tools like Terraform, automation, CI/CD pipelines, and designing resilient, scalable architectures.",
-            "Certifications to Explore": [
-                "AWS Certified DevOps Engineer – Professional",
-                "Microsoft Certified: DevOps Engineer Expert",
-                "Certified Kubernetes Administrator (CKA)"
-            ],
-            "Job Titles to Target": [
-                "Senior Cloud Engineer",
-                "Cloud Architect",
-                "DevOps Specialist"
-            ]
+            "Focus On": "Infrastructure as Code (Terraform), automation (CI/CD pipelines), and designing resilient, scalable architectures.",
+            "Certifications & Skills to Explore": [ "AWS Certified DevOps Engineer – Professional", "Certified Kubernetes Administrator (CKA)" ],
+            "Job Titles to Target": [ "Senior Cloud Engineer", "Cloud Architect", "DevOps Specialist" ]
+        }
+    },
+    "Software Development": {
+        "Beginner": {
+            "Focus On": "Core programming fundamentals: variables, loops, functions, and basic data structures.",
+            "Certifications & Skills to Explore": [ "Learn a language like Python or Java", "Basic understanding of algorithms", "Git and version control" ],
+            "Job Titles to Target": [ "Programming Intern", "Junior Developer (Trainee)", "QA Tester" ]
+        },
+        "Intermediate": {
+            "Focus On": "Object-Oriented Programming (OOP), working with APIs, and understanding database design.",
+            "Certifications & Skills to Explore": [ "Build personal projects", "Data Structures & Algorithms courses", "SQL and database interaction" ],
+            "Job Titles to Target": [ "Software Developer", "Backend Developer", "Application Developer" ]
+        },
+        "Advanced": {
+            "Focus On": "System design and architecture, concurrent programming, software testing, and performance optimization.",
+            "Certifications & Skills to Explore": [ "Design Patterns", "Advanced algorithms", "Contributing to open-source projects" ],
+            "Job Titles to Target": [ "Senior Software Engineer", "Software Architect", "Lead Developer" ]
+        }
+    },
+    "Web Development": {
+        "Beginner": {
+            "Focus On": "The fundamentals of the web: HTML for structure, CSS for styling, and basic JavaScript for interactivity.",
+            "Certifications & Skills to Explore": [ "Build a personal portfolio website", "Learn about the DOM", "Responsive Design principles" ],
+            "Job Titles to Target": [ "Junior Frontend Developer (Intern)", "Web Content Editor", "Email Developer" ]
+        },
+        "Intermediate": {
+            "Focus On": "Mastering JavaScript, learning a frontend framework (React, Vue, or Angular), and interacting with REST APIs.",
+            "Certifications & Skills to Explore": [ "JavaScript frameworks (e.g., React.js)", "Understanding of HTTP and REST", "Using browser developer tools" ],
+            "Job Titles to Target": [ "Frontend Developer", "UI Developer", "Full Stack Developer (Junior)" ]
+        },
+        "Advanced": {
+            "Focus On": "State management, application performance, build tools (Webpack/Vite), and web security (XSS, CSRF).",
+            "Certifications & Skills to Explore": [ "Advanced state management (Redux, etc.)", "Web performance optimization", "Understanding of build processes" ],
+            "Job Titles to Target": [ "Senior Frontend Developer", "UI Architect", "Full Stack Engineer" ]
         }
     }
 }
