@@ -310,30 +310,30 @@
     {
         "category": "Cybersecurity",
         "difficulty": "Expert",
-        "question": "What is the primary goal of 'threat hunting'?",
-        "options": { "a": "To wait for automated alerts before taking action", "b": "To proactively and iteratively search through networks and datasets to detect and isolate advanced threats that evade existing security solutions", "c": "To perform routine vulnerability scans", "d": "To install and configure firewalls" },
+        "question": "During a penetration test, what is the 'reconnaissance' phase?",
+        "options": { "a": "The phase where exploits are actively used against a target", "b": "The phase of gathering information about a target system or network before performing any attacks", "c": "The phase of writing the final report", "d": "The phase of removing all traces of the test" },
         "answer": "b"
     },
     {
         "category": "Cybersecurity",
         "difficulty": "Expert",
-        "question": "What is an 'Indicator of Compromise' (IoC)?",
-        "options": { "a": "A general security best practice", "b": "A piece of forensic data, such as a file hash or IP address, that indicates a potential intrusion", "c": "A type of security policy", "d": "A physical security token" },
+        "question": "What is a 'pass-the-hash' attack?",
+        "options": { "a": "A method of cracking passwords by trying all possible combinations", "b": "An attack where an attacker captures a password hash and uses it to authenticate to a remote server or service", "c": "A type of social engineering attack", "d": "A denial-of-service attack" },
         "answer": "b"
     },
     {
         "category": "Cybersecurity",
         "difficulty": "Expert",
-        "question": "During an incident response, what is the 'chain of custody' used for?",
-        "options": { "a": "To document the timeline of the incident", "b": "To communicate with stakeholders", "c": "To document the chronological handling of evidence to ensure its integrity", "d": "To assign blame for the incident" },
-        "answer": "c"
+        "question": "What is the primary goal of an SQL Injection (SQLi) attack?",
+        "options": { "a": "To crash the web server", "b": "To inject malicious SQL code into a web application's database query to manipulate or retrieve data", "c": "To steal a user's session cookie", "d": "To deface a website" },
+        "answer": "b"
     },
     {
         "category": "Cybersecurity",
         "difficulty": "Expert",
-        "question": "What is the purpose of a 'honeypot' in a security architecture?",
-        "options": { "a": "To store sensitive company data", "b": "To serve as a production web server", "c": "To act as a decoy to attract and study attackers, diverting them from legitimate targets", "d": "To filter spam email" },
-        "answer": "c"
+        "question": "In the context of ethical hacking, what is 'pivoting'?",
+        "options": { "a": "A method of changing your IP address", "b": "The process of using a compromised system to attack other systems on the same internal network", "c": "A technique for cracking wireless encryption", "d": "A social engineering tactic" },
+        "answer": "b"
     },
     {
         "category": "Cloud Engineering",

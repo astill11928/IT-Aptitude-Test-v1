@@ -55,14 +55,14 @@
             "Job Titles to Target": [ "Security Analyst", "Cybersecurity Specialist", "Incident Responder (Junior)" ]
         },
         "Advanced": {
-            "Focus On": "Penetration testing, incident response, and in-depth threat analysis.",
-            "Certifications & Skills to Explore": [ "CompTIA PenTest+", "CompTIA CySA+", "eJPT (eLearnSecurity Junior Penetration Tester)" ],
-            "Job Titles to Target": [ "Penetration Tester", "Cybersecurity Analyst", "Incident Responder" ]
+            "Focus On": "Defensive Operations (Blue Team): Threat analysis, incident response, and digital forensics.",
+            "Certifications & Skills to Explore": [ "CompTIA CySA+", "Blue Team training (e.g., BTL1)", "SIEM query languages (e.g., Splunk SPL)" ],
+            "Job Titles to Target": [ "Cybersecurity Analyst", "SOC Analyst (Tier 2)", "Incident Responder" ]
         },
         "Expert": {
-            "Focus On": "Threat hunting, digital forensics, risk management, and security program oversight.",
-            "Certifications & Skills to Explore": [ "CompTIA CASP+", "CISSP (Certified Information Systems Security Professional)", "OSCP (Offensive Security Certified Professional)" ],
-            "Job Titles to Target": [ "Senior Cybersecurity Analyst", "Threat Hunter", "Security Architect" ]
+            "Focus On": "Offensive Operations (Red Team): Penetration testing, vulnerability exploitation, and reporting.",
+            "Certifications & Skills to Explore": [ "CompTIA PenTest+", "eJPT (eLearnSecurity Junior Penetration Tester)", "OSCP (Offensive Security Certified Professional)" ],
+            "Job Titles to Target": [ "Penetration Tester", "Ethical Hacker", "Red Team Operator" ]
         }
     },
     "Cloud Engineering": {
@@ -122,7 +122,7 @@
         },
         "Advanced": {
             "Focus On": "State management, application performance, build tools (Webpack/Vite), and web security (XSS, CSRF).",
-            "Certifications &Skills to Explore": [ "Advanced state management (Redux, etc.)", "Web performance optimization", "Understanding of build processes" ],
+            "Certifications & Skills to Explore": [ "Advanced state management (Redux, etc.)", "Web performance optimization", "Understanding of build processes" ],
             "Job Titles to Target": [ "Senior Frontend Developer", "UI Architect", "Full Stack Engineer" ]
         },
         "Expert": {
