@@ -1,11 +1,24 @@
 import json
 import os
 import textwrap
+import sys # Import the sys module
+
+# --- Helper function to handle bundled file paths ---
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 
 # --- Constants ---
-QUESTIONS_FILE = 'questions.json'
-RECOMMENDATIONS_FILE = 'recommendations.json'
-# Updated proficiency levels for the four-tier system
+# Use the helper function to define file paths
+QUESTIONS_FILE = resource_path('questions.json')
+RECOMMENDATIONS_FILE = resource_path('recommendations.json')
+
 PROFICIENCY_LEVELS = {
     'Beginner': (0, 25),
     'Intermediate': (26, 50),
@@ -36,11 +49,13 @@ def load_json_data(filename):
             return json.load(f)
     except FileNotFoundError:
         print(f"Error: The file '{filename}' was not found.")
-        print("Please make sure it is in the same directory as the script.")
+        print("This can happen if the JSON files were not bundled correctly.")
+        input("Press Enter to exit.") # Add input to keep window open
         exit()
     except json.JSONDecodeError:
         print(f"Error: Could not decode the JSON from '{filename}'.")
         print("Please check the file for formatting errors.")
+        input("Press Enter to exit.") # Add input to keep window open
         exit()
 
 def get_proficiency_level(score):
@@ -149,6 +164,7 @@ def display_report(results, strongest_category, recommendations):
 
     print("\n" + "=" * 50)
     print("\nThank you for taking the test!")
+    input("\nPress Enter to exit.") # Add input to keep window open at the end
 
 
 # --- Main Execution ---
