@@ -84,6 +84,34 @@
         "answer": "c"
     },
     {
+        "category": "IT Operations & Support",
+        "difficulty": "Expert",
+        "question": "A company wants to implement a VDI solution for 500 remote users. What is a primary consideration for ensuring a good user experience?",
+        "options": { "a": "The color of the server racks", "b": "Network latency and bandwidth between the users and the data center", "c": "The brand of the thin clients", "d": "The physical security of the data center" },
+        "answer": "b"
+    },
+    {
+        "category": "IT Operations & Support",
+        "difficulty": "Expert",
+        "question": "What is the primary goal of a post-incident review in an IT operational context?",
+        "options": { "a": "To assign blame for the incident", "b": "To identify the root cause and implement changes to prevent recurrence", "c": "To calculate the financial cost of the incident", "d": "To complete the required paperwork" },
+        "answer": "b"
+    },
+    {
+        "category": "IT Operations & Support",
+        "difficulty": "Expert",
+        "question": "You are designing a backup strategy. What is the '3-2-1 rule'?",
+        "options": { "a": "3 backups, 2 hours apart, on 1 device", "b": "3 administrators, 2 locations, 1 backup type", "c": "At least 3 copies of your data, on 2 different media types, with 1 copy off-site", "d": "3 full backups, 2 incremental backups, 1 differential backup" },
+        "answer": "c"
+    },
+    {
+        "category": "IT Operations & Support",
+        "difficulty": "Expert",
+        "question": "What is the primary benefit of using a configuration management tool like Ansible or Puppet in a large server environment?",
+        "options": { "a": "It provides a graphical user interface for each server", "b": "It allows for the automation and enforcement of a consistent state across all servers", "c": "It automatically backs up all data", "d": "It functions as an antivirus solution" },
+        "answer": "b"
+    },
+    {
         "category": "Network Engineering",
         "difficulty": "Beginner",
         "question": "What is the function of a DHCP server?",
@@ -168,6 +196,34 @@
         "answer": "d"
     },
     {
+        "category": "Network Engineering",
+        "difficulty": "Expert",
+        "question": "What is the primary benefit of using a software-defined networking (SDN) architecture?",
+        "options": { "a": "It increases the physical speed of the network cables", "b": "It centralizes network control and separates the control plane from the data plane", "c": "It eliminates the need for routers and switches", "d": "It is only compatible with a single vendor's hardware" },
+        "answer": "b"
+    },
+    {
+        "category": "Network Engineering",
+        "difficulty": "Expert",
+        "question": "What is Quality of Service (QoS) used for in a network?",
+        "options": { "a": "To ensure all traffic is treated with the same priority", "b": "To manage network traffic to reduce packet loss and latency for critical applications like VoIP", "c": "To block all incoming traffic by default", "d": "To automatically detect and remove malware" },
+        "answer": "b"
+    },
+    {
+        "category": "Network Engineering",
+        "difficulty": "Expert",
+        "question": "You are designing a highly available network. What is the purpose of a First Hop Redundancy Protocol (FHRP) like HSRP or VRRP?",
+        "options": { "a": "To combine multiple physical links into a single logical link", "b": "To provide a redundant default gateway for devices on a subnet", "c": "To encrypt all traffic leaving the network", "d": "To inspect packets for malicious content" },
+        "answer": "b"
+    },
+    {
+        "category": "Network Engineering",
+        "difficulty": "Expert",
+        "question": "What is a primary use case for implementing MPLS (Multiprotocol Label Switching) in a large enterprise WAN?",
+        "options": { "a": "To provide basic internet access to a small office", "b": "To create a flexible and scalable network that can carry multiple types of traffic with specific performance guarantees", "c": "To replace all physical cabling with wireless links", "d": "To manage user accounts and passwords" },
+        "answer": "b"
+    },
+    {
         "category": "Cybersecurity",
         "difficulty": "Beginner",
         "question": "What is the primary purpose of a firewall?",
@@ -249,6 +305,34 @@
         "difficulty": "Advanced",
         "question": "What is the purpose of a Security Information and Event Management (SIEM) system?",
         "options": { "a": "To manage physical security guards", "b": "To provide a single interface for managing all network devices", "c": "To aggregate and analyze log data from multiple sources to detect security threats", "d": "To deploy software updates" },
+        "answer": "c"
+    },
+    {
+        "category": "Cybersecurity",
+        "difficulty": "Expert",
+        "question": "What is the primary goal of 'threat hunting'?",
+        "options": { "a": "To wait for automated alerts before taking action", "b": "To proactively and iteratively search through networks and datasets to detect and isolate advanced threats that evade existing security solutions", "c": "To perform routine vulnerability scans", "d": "To install and configure firewalls" },
+        "answer": "b"
+    },
+    {
+        "category": "Cybersecurity",
+        "difficulty": "Expert",
+        "question": "What is an 'Indicator of Compromise' (IoC)?",
+        "options": { "a": "A general security best practice", "b": "A piece of forensic data, such as a file hash or IP address, that indicates a potential intrusion", "c": "A type of security policy", "d": "A physical security token" },
+        "answer": "b"
+    },
+    {
+        "category": "Cybersecurity",
+        "difficulty": "Expert",
+        "question": "During an incident response, what is the 'chain of custody' used for?",
+        "options": { "a": "To document the timeline of the incident", "b": "To communicate with stakeholders", "c": "To document the chronological handling of evidence to ensure its integrity", "d": "To assign blame for the incident" },
+        "answer": "c"
+    },
+    {
+        "category": "Cybersecurity",
+        "difficulty": "Expert",
+        "question": "What is the purpose of a 'honeypot' in a security architecture?",
+        "options": { "a": "To store sensitive company data", "b": "To serve as a production web server", "c": "To act as a decoy to attract and study attackers, diverting them from legitimate targets", "d": "To filter spam email" },
         "answer": "c"
     },
     {
@@ -336,6 +420,34 @@
         "answer": "b"
     },
     {
+        "category": "Cloud Engineering",
+        "difficulty": "Expert",
+        "question": "What is the primary benefit of a 'multi-cloud' strategy?",
+        "options": { "a": "It is always cheaper than a single cloud provider", "b": "It simplifies vendor management", "c": "It avoids vendor lock-in and allows for leveraging the best services from different providers", "d": "It reduces network latency" },
+        "answer": "c"
+    },
+    {
+        "category": "Cloud Engineering",
+        "difficulty": "Expert",
+        "question": "What is the role of a 'Cloud Access Security Broker' (CASB)?",
+        "options": { "a": "To provide high-speed physical connections to the cloud", "b": "To act as an intermediary to enforce security policies as cloud resources are accessed", "c": "A marketplace for buying cloud services", "d": "A type of load balancer" },
+        "answer": "b"
+    },
+    {
+        "category": "Cloud Engineering",
+        "difficulty": "Expert",
+        "question": "In a cloud environment, what is 'autoscaling'?",
+        "options": { "a": "The process of manually adding more servers", "b": "The automatic adjustment of computing resources in response to traffic demand", "c": "A method for encrypting data at rest", "d": "A billing model for cloud services" },
+        "answer": "b"
+    },
+    {
+        "category": "Cloud Engineering",
+        "difficulty": "Expert",
+        "question": "What is the concept of 'FinOps' in a cloud context?",
+        "options": { "a": "A new cloud provider", "b": "A security protocol for financial transactions", "c": "A cultural practice and framework for bringing financial accountability to the variable spending model of the cloud", "d": "A tool for automating deployments" },
+        "answer": "c"
+    },
+    {
         "category": "Software Development",
         "difficulty": "Beginner",
         "question": "In programming, what is a 'variable'?",
@@ -420,6 +532,34 @@
         "answer": "b"
     },
     {
+        "category": "Software Development",
+        "difficulty": "Expert",
+        "question": "What is a primary benefit of using a 'microservices' architecture?",
+        "options": { "a": "It simplifies deployment since there is only one service", "b": "It allows for independent development, deployment, and scaling of individual components of an application", "c": "It reduces the need for network communication", "d": "It is only suitable for small, simple applications" },
+        "answer": "b"
+    },
+    {
+        "category": "Software Development",
+        "difficulty": "Expert",
+        "question": "What is the 'SOLID' principle in object-oriented design?",
+        "options": { "a": "A set of rules for database normalization", "b": "A mnemonic acronym for five design principles intended to make software designs more understandable, flexible, and maintainable", "c": "A software testing methodology", "d": "A version control branching strategy" },
+        "answer": "b"
+    },
+    {
+        "category": "Software Development",
+        "difficulty": "Expert",
+        "question": "What is a common use case for a message queue (like RabbitMQ or SQS) in a distributed system?",
+        "options": { "a": "To store user passwords securely", "b": "To serve static web content", "c": "To decouple services and manage tasks asynchronously", "d": "To perform database transactions" },
+        "answer": "c"
+    },
+    {
+        "category": "Software Development",
+        "difficulty": "Expert",
+        "question": "What is the purpose of 'unit testing' in the software development lifecycle?",
+        "options": { "a": "To test the entire application as a whole", "b": "To test individual components or functions of the software in isolation", "c": "To have users test the application", "d": "To test the performance of the application under heavy load" },
+        "answer": "b"
+    },
+    {
         "category": "Web Development",
         "difficulty": "Beginner",
         "question": "What does HTML stand for?",
@@ -499,8 +639,36 @@
     {
         "category": "Web Development",
         "difficulty": "Advanced",
+        "question": "What is the role of a 'bundler' like Webpack or Vite in modern web development?",
+        "options": { "a": "To format code according to style guides", "b": "To process and combine modules and assets (like JS, CSS, images) into optimized files for the browser", "c": "To run tests on the code", "d": "To manage user authentication" },
+        "answer": "b"
+    },
+    {
+        "category": "Web Development",
+        "difficulty": "Expert",
+        "question": "What is 'Server-Side Rendering' (SSR) and what is a primary benefit?",
+        "options": { "a": "It renders the entire application on the client-side for faster interactivity", "b": "It renders the initial HTML on the server, which can improve performance and SEO", "c": "It is a CSS technique for styling servers", "d": "It is a method for securing APIs" },
+        "answer": "b"
+    },
+    {
+        "category": "Web Development",
+        "difficulty": "Expert",
+        "question": "What is the purpose of a 'Content Delivery Network' (CDN) in web architecture?",
+        "options": { "a": "To host the application's database", "b": "To distribute static assets geographically closer to users to reduce latency", "c": "To run server-side application logic", "d": "To manage user authentication" },
+        "answer": "b"
+    },
+    {
+        "category": "Web Development",
+        "difficulty": "Expert",
         "question": "What is the concept of 'state' in a frontend application framework like React?",
         "options": { "a": "The final, deployed version of the application", "b": "A JavaScript object that represents the parts of the app that can change over time", "c": "The CSS styles applied to the components", "d": "The server that hosts the application" },
+        "answer": "b"
+    },
+    {
+        "category": "Web Development",
+        "difficulty": "Expert",
+        "question": "What is 'tree shaking' in the context of a JavaScript bundler?",
+        "options": { "a": "A debugging technique", "b": "A process to eliminate unused code from the final bundle to reduce its size", "c": "A way to animate elements on a page", "d": "A method for organizing files in a project" },
         "answer": "b"
     }
 ]

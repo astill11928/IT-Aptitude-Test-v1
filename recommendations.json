@@ -14,6 +14,11 @@
             "Focus On": "System administration, scripting for automation (PowerShell/Bash), and infrastructure support.",
             "Certifications & Skills to Explore": [ "CompTIA Linux+", "CompTIA Server+", "ITIL Foundation" ],
             "Job Titles to Target": [ "Senior Support Analyst", "Junior System Administrator", "IT Team Lead" ]
+        },
+        "Expert": {
+            "Focus On": "IT strategy, infrastructure design, project management, and mentoring.",
+            "Certifications & Skills to Explore": [ "Project+ or PMP", "Advanced PowerShell Scripting", "ITIL Expert" ],
+            "Job Titles to Target": [ "IT Manager", "Systems Architect", "Infrastructure Manager" ]
         }
     },
     "Network Engineering": {
@@ -31,6 +36,11 @@
             "Focus On": "Designing and securing complex networks, advanced routing (BGP, OSPF), and network automation.",
             "Certifications & Skills to Explore": [ "CCNP (Cisco Certified Network Professional)", "Advanced Python for Networking", "Juniper JNCIA" ],
             "Job Titles to Target": [ "Senior Network Engineer", "Network Architect", "Solutions Architect" ]
+        },
+        "Expert": {
+            "Focus On": "Software-Defined Networking (SDN), high-availability network design, and advanced network security architecture.",
+            "Certifications & Skills to Explore": [ "CCIE (Cisco Certified Internetwork Expert)", "Advanced SDN training", "Zero Trust Architecture" ],
+            "Job Titles to Target": [ "Principal Network Engineer", "Network Architect", "Network Engineering Manager" ]
         }
     },
     "Cybersecurity": {
@@ -41,13 +51,18 @@
         },
         "Intermediate": {
             "Focus On": "Threat and vulnerability management, security architecture, and identity and access management.",
-            "Certifications & Skills to Explore": [ "CompTIA Security+ (full certification)", "CompTIA PenTest+", "Understanding of SIEM tools" ],
-            "Job Titles to Target": [ "Security Analyst", "Cybersecurity Specialist", "Incident Responder" ]
+            "Certifications & Skills to Explore": [ "CompTIA Security+ (full certification)", "Understanding of SIEM tools" ],
+            "Job Titles to Target": [ "Security Analyst", "Cybersecurity Specialist", "Incident Responder (Junior)" ]
         },
         "Advanced": {
-            "Focus On": "Risk management, governance, compliance, and advanced threat hunting and analysis.",
-            "Certifications & Skills to Explore": [ "CompTIA CySA+", "CompTIA CASP+", "CISSP (Certified Information Systems Security Professional)" ],
-            "Job Titles to Target": [ "Senior Security Analyst", "Cybersecurity Engineer", "Security Architect" ]
+            "Focus On": "Penetration testing, incident response, and in-depth threat analysis.",
+            "Certifications & Skills to Explore": [ "CompTIA PenTest+", "CompTIA CySA+", "eJPT (eLearnSecurity Junior Penetration Tester)" ],
+            "Job Titles to Target": [ "Penetration Tester", "Cybersecurity Analyst", "Incident Responder" ]
+        },
+        "Expert": {
+            "Focus On": "Threat hunting, digital forensics, risk management, and security program oversight.",
+            "Certifications & Skills to Explore": [ "CompTIA CASP+", "CISSP (Certified Information Systems Security Professional)", "OSCP (Offensive Security Certified Professional)" ],
+            "Job Titles to Target": [ "Senior Cybersecurity Analyst", "Threat Hunter", "Security Architect" ]
         }
     },
     "Cloud Engineering": {
@@ -65,6 +80,11 @@
             "Focus On": "Infrastructure as Code (Terraform), automation (CI/CD pipelines), and designing resilient, scalable architectures.",
             "Certifications & Skills to Explore": [ "AWS Certified DevOps Engineer – Professional", "Certified Kubernetes Administrator (CKA)" ],
             "Job Titles to Target": [ "Senior Cloud Engineer", "Cloud Architect", "DevOps Specialist" ]
+        },
+        "Expert": {
+            "Focus On": "Multi-cloud architecture, cloud security and governance (FinOps), and advanced container orchestration.",
+            "Certifications & Skills to Explore": [ "AWS Certified Solutions Architect – Professional", "Google Certified Professional Cloud Architect", "Advanced Kubernetes" ],
+            "Job Titles to Target": [ "Principal Cloud Architect", "Cloud Security Engineer", "Head of Cloud Operations" ]
         }
     },
     "Software Development": {
@@ -82,6 +102,11 @@
             "Focus On": "System design and architecture, concurrent programming, software testing, and performance optimization.",
             "Certifications & Skills to Explore": [ "Design Patterns", "Advanced algorithms", "Contributing to open-source projects" ],
             "Job Titles to Target": [ "Senior Software Engineer", "Software Architect", "Lead Developer" ]
+        },
+        "Expert": {
+            "Focus On": "Distributed systems design, microservices architecture, and advanced performance tuning.",
+            "Certifications & Skills to Explore": [ "System Design interviews preparation", "Advanced concurrency patterns", "Database optimization" ],
+            "Job Titles to Target": [ "Principal Software Engineer", "Staff Engineer", "Software Engineering Manager" ]
         }
     },
     "Web Development": {
@@ -97,8 +122,13 @@
         },
         "Advanced": {
             "Focus On": "State management, application performance, build tools (Webpack/Vite), and web security (XSS, CSRF).",
-            "Certifications & Skills to Explore": [ "Advanced state management (Redux, etc.)", "Web performance optimization", "Understanding of build processes" ],
+            "Certifications &Skills to Explore": [ "Advanced state management (Redux, etc.)", "Web performance optimization", "Understanding of build processes" ],
             "Job Titles to Target": [ "Senior Frontend Developer", "UI Architect", "Full Stack Engineer" ]
+        },
+        "Expert": {
+            "Focus On": "Advanced architectural patterns (SSR, SSG), API design, and leading frontend projects.",
+            "Certifications & Skills to Explore": [ "GraphQL", "WebSockets", "Leading a team or major project feature" ],
+            "Job Titles to Target": [ "Principal Frontend Engineer", "Staff Frontend Engineer", "UI Engineering Lead" ]
         }
     }
 }

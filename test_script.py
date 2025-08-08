@@ -5,12 +5,14 @@ import textwrap
 # --- Constants ---
 QUESTIONS_FILE = 'questions.json'
 RECOMMENDATIONS_FILE = 'recommendations.json'
+# Updated proficiency levels for the four-tier system
 PROFICIENCY_LEVELS = {
-    'Beginner': (0, 40),
-    'Intermediate': (41, 75),
-    'Advanced': (76, 100)
+    'Beginner': (0, 25),
+    'Intermediate': (26, 50),
+    'Advanced': (51, 75),
+    'Expert': (76, 100)
 }
-# Updated categories for version 1.05
+# Categories for version 1.06
 CATEGORIES = [
     "IT Operations & Support",
     "Network Engineering",
@@ -19,7 +21,7 @@ CATEGORIES = [
     "Software Development",
     "Web Development"
 ]
-QUESTIONS_PER_CATEGORY = 12
+QUESTIONS_PER_CATEGORY = 16
 
 # --- Helper Functions ---
 
@@ -71,7 +73,7 @@ def get_user_answer(options):
 
 def run_test(questions):
     """Main function to run the entire aptitude test."""
-    # Initialize scores based on the new categories
+    # Initialize scores based on the categories
     scores = {category: {'correct': 0, 'total': 0} for category in CATEGORIES}
     total_questions_count = len(questions)
 
@@ -155,7 +157,7 @@ if __name__ == "__main__":
     all_recommendations = load_json_data(RECOMMENDATIONS_FILE)
     
     clear_screen()
-    print("Welcome to the Technology Aptitude Test v1.05!")
+    print("Welcome to the Technology Aptitude Test v1.06!")
     print(f"This is a {len(all_questions)}-question multiple-choice test.")
     print("It will help identify your strengths across six key areas of technology.")
     input("\nPress Enter to begin...")
