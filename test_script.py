@@ -2,6 +2,7 @@ import json
 import os
 import textwrap
 import sys
+import random
 
 # --- Helper function to handle bundled file paths ---
 def resource_path(relative_path):
@@ -23,7 +24,6 @@ PROFICIENCY_LEVELS = {
     'Advanced': (51, 75),
     'Expert': (76, 100)
 }
-# All available categories
 ALL_CATEGORIES = [
     "IT Operations & Support",
     "Network Engineering",
@@ -32,7 +32,9 @@ ALL_CATEGORIES = [
     "Software Development",
     "Web Development"
 ]
+DIFFICULTY_LEVELS = ["Beginner", "Intermediate", "Advanced", "Expert"]
 QUESTIONS_PER_CATEGORY = 16
+ADAPTIVE_BASELINE_COUNT = 2
 
 # --- Helper Functions ---
 
@@ -47,12 +49,10 @@ def load_json_data(filename):
             return json.load(f)
     except FileNotFoundError:
         print(f"Error: The file '{filename}' was not found.")
-        print("This can happen if the JSON files were not bundled correctly.")
         input("Press Enter to exit.")
         exit()
     except json.JSONDecodeError:
         print(f"Error: Could not decode the JSON from '{filename}'.")
-        print("Please check the file for formatting errors.")
         input("Press Enter to exit.")
         exit()
 
@@ -83,54 +83,52 @@ def get_user_answer(options):
         else:
             print("Invalid input. Please enter A, B, C, or D.")
 
-def select_categories():
-    """Allows the user to select which categories to be tested on."""
+def get_user_selection(prompt_message, selection_list, allow_all=False):
+    """Generic function to get user's numbered selection from a list."""
     while True:
         clear_screen()
-        print("Please select the categories you would like to be tested on.")
-        for i, category in enumerate(ALL_CATEGORIES, 1):
-            print(f"  {i}) {category}")
-        print("\nEnter the numbers of the categories, separated by commas (e.g., 1,3,5).")
-        print("Or, type 'all' to take the full test.")
+        print(prompt_message)
+        for i, item in enumerate(selection_list, 1):
+            print(f"  {i}) {item}")
         
+        if allow_all:
+            print("\nEnter the numbers of your choices, separated by commas (e.g., 1,3,5).")
+            print("Or, type 'all' to select all.")
+        else:
+            print("\nEnter the numbers of your choices, separated by commas (e.g., 2,4).")
+
         user_input = input("\nYour selection: ").lower().strip()
 
-        if user_input == 'all':
-            return ALL_CATEGORIES
+        if allow_all and user_input == 'all':
+            return selection_list
 
         selected_indices = []
         try:
             parts = user_input.split(',')
+            if not parts or parts == ['']:
+                 raise ValueError
             for part in parts:
                 index = int(part.strip())
-                if 1 <= index <= len(ALL_CATEGORIES):
+                if 1 <= index <= len(selection_list):
                     selected_indices.append(index - 1)
                 else:
                     raise ValueError
             
             if selected_indices:
-                # Remove duplicates and sort
                 unique_indices = sorted(list(set(selected_indices)))
-                return [ALL_CATEGORIES[i] for i in unique_indices]
+                return [selection_list[i] for i in unique_indices]
             else:
                 print("Invalid input. Please enter numbers from the list.")
                 input("Press Enter to try again...")
 
         except ValueError:
-            print("Invalid input. Please enter numbers from the list, separated by commas.")
+            print("Invalid input. Please enter valid numbers from the list, separated by commas.")
             input("Press Enter to try again...")
 
-
-def run_test(questions, selected_categories):
-    """Main function to run the selected sections of the aptitude test."""
-    # Filter questions based on selected categories
-    test_questions = [q for q in questions if q['category'] in selected_categories]
-    
-    # Initialize scores for selected categories only
-    scores = {category: {'correct': 0, 'total': 0} for category in selected_categories}
-    total_questions_count = len(test_questions)
-
-    for i, q_data in enumerate(test_questions, 1):
+def run_test(questions, scores):
+    """Core test-taking loop for a given list of questions."""
+    total_questions_count = len(questions)
+    for i, q_data in enumerate(questions, 1):
         clear_screen()
         display_question(q_data, i, total_questions_count)
         user_answer = get_user_answer(q_data['options'])
@@ -144,31 +142,32 @@ def run_test(questions, selected_categories):
             print(f"\nIncorrect. The correct answer was {q_data['answer'].upper()}.")
 
         input("\nPress Enter to continue to the next question...")
-
     return scores
 
 def calculate_results(scores):
-    """Calculates the final percentages and identifies the strongest area from the taken sections."""
+    """Calculates final percentages and identifies the strongest and second strongest areas."""
     results = {}
     for category, data in scores.items():
         if data['total'] > 0:
-            percentage = (data['correct'] / QUESTIONS_PER_CATEGORY) * 100
+            percentage = (data['correct'] / data['total']) * 100
             results[category] = {
                 'score': round(percentage),
                 'proficiency': get_proficiency_level(percentage)
             }
         else:
-            # This case should not happen with the new logic, but is kept for safety
             results[category] = {'score': 0, 'proficiency': 'Beginner'}
     
     if not results:
-        return {}, None
+        return {}, None, None
 
-    # Determine the strongest category among the ones taken
-    strongest_category = max(results, key=lambda cat: results[cat]['score'])
-    return results, strongest_category
+    sorted_categories = sorted(results.items(), key=lambda item: item[1]['score'], reverse=True)
+    
+    strongest_category = sorted_categories[0][0] if sorted_categories else None
+    second_strongest_category = sorted_categories[1][0] if len(sorted_categories) > 1 else None
+    
+    return results, strongest_category, second_strongest_category
 
-def display_report(results, strongest_category, recommendations):
+def display_report(results, strongest_category, second_strongest_category, recommendations, user_interests):
     """Displays the final aptitude report and recommendations."""
     clear_screen()
     print("=" * 30)
@@ -186,15 +185,23 @@ def display_report(results, strongest_category, recommendations):
         print(f"  - {category}: {data['score']}% ({data['proficiency']} Proficiency)")
 
     print("\n" + "=" * 50)
-    print(f"\nBased on the sections you took, your strongest area appears to be: ** {strongest_category} **\n")
+    print("\nInterest vs. Aptitude Analysis:")
+    if strongest_category in user_interests:
+        print(f"Great news! Your strongest aptitude in '{strongest_category}' aligns with your stated interests.")
+        print("This is a strong indicator that you should focus your career development in this area.")
+    else:
+        print(f"Your results show a strong aptitude for '{strongest_category}'.")
+        print(f"While this differs from your stated interest(s) in {', '.join(user_interests)},")
+        print("it highlights a potential natural talent you could explore further.")
+    
+    print("\n" + "=" * 50)
+    print(f"\nPrimary Recommendation (Based on your strongest aptitude: {strongest_category})\n")
 
     proficiency_of_strongest = results[strongest_category]['proficiency']
     
     if strongest_category in recommendations and proficiency_of_strongest in recommendations[strongest_category]:
         rec = recommendations[strongest_category][proficiency_of_strongest]
-
-        print("Based on this result, here is a potential path for you to explore:")
-        print(f"\n**Focus On:** {rec['Focus On']}")
+        print(f"**Focus On:** {rec['Focus On']}")
         print("\n**Certifications & Skills to Explore:**")
         for cert in rec['Certifications & Skills to Explore']:
             print(f"  - {cert}")
@@ -204,7 +211,46 @@ def display_report(results, strongest_category, recommendations):
     else:
         print("Could not retrieve recommendations for your strongest category.")
 
-    # New Feature: Suggest other areas to explore if not all sections were taken
+    if second_strongest_category:
+        print("\n" + "=" * 50)
+        print("\nYour Secondary Strength & Complementary Skills\n")
+        print(f"Your results also show a strong aptitude for '{second_strongest_category}'.")
+        print("Skills in this area often complement your primary strength and can lead to powerful career combinations.")
+        print("Consider exploring this as a future specialization or as a way to enhance your primary skill set.")
+
+    # --- New Feature: Hybrid Role Analysis ---
+    if 'hybrid_roles' in recommendations:
+        hybrid_recommendations = []
+        for role in recommendations['hybrid_roles']:
+            is_match = True
+            # Check if all required categories for the hybrid role were tested
+            if not all(cat in results for cat in role['required_categories']):
+                is_match = False
+                continue
+            # Check if scores meet the threshold
+            for req_cat in role['required_categories']:
+                if results[req_cat]['score'] < role['score_threshold']:
+                    is_match = False
+                    break
+            if is_match:
+                hybrid_recommendations.append(role)
+        
+        if hybrid_recommendations:
+            print("\n" + "=" * 50)
+            print("\nPotential Hybrid Roles\n")
+            print("Your scores indicate a strong aptitude for the following hybrid roles:")
+            for role in hybrid_recommendations:
+                print(f"\n--- {role['name']} ---")
+                print(f"Description: {role['description']}")
+                rec = role['recommendation']
+                print(f"\n**Focus On:** {rec['Focus On']}")
+                print("\n**Certifications & Skills to Explore:**")
+                for cert in rec['Certifications & Skills to Explore']:
+                    print(f"  - {cert}")
+                print("\n**Job Titles to Target:**")
+                for title in rec['Job Titles to Target']:
+                    print(f"  - {title}")
+
     taken_categories = set(results.keys())
     all_test_categories = set(ALL_CATEGORIES)
     not_taken_categories = all_test_categories - taken_categories
@@ -216,27 +262,67 @@ def display_report(results, strongest_category, recommendations):
         for category in sorted(list(not_taken_categories)):
             print(f"  - {category}")
 
-
     print("\n" + "=" * 50)
     print("\nThank you for taking the test!")
     input("\nPress Enter to exit.")
-
 
 # --- Main Execution ---
 if __name__ == "__main__":
     all_questions = load_json_data(QUESTIONS_FILE)
     all_recommendations = load_json_data(RECOMMENDATIONS_FILE)
     
-    # New step: Let the user select categories
-    user_selected_categories = select_categories()
+    user_interests = get_user_selection("First, tell us which areas you are most interested in pursuing.", ALL_CATEGORIES, allow_all=False)
+    user_selected_categories = get_user_selection("Next, select the categories you want to be tested on.", ALL_CATEGORIES, allow_all=True)
     
-    clear_screen()
-    print("Welcome to the Technology Aptitude Test!")
-    question_count = len(user_selected_categories) * QUESTIONS_PER_CATEGORY
-    print(f"You have selected {len(user_selected_categories)} section(s) for a total of {question_count} questions.")
-    print("This test will help identify your strengths in your chosen domains.")
-    input("\nPress Enter to begin...")
-    
-    final_scores = run_test(all_questions, user_selected_categories)
-    final_results, strongest = calculate_results(final_scores)
-    display_report(final_results, strongest, all_recommendations)
+    test_modes = ["Full Assessment (All difficulties)", "Targeted Difficulty (You choose levels)", "Adaptive Assessment (Starts at Intermediate and adjusts)"]
+    chosen_mode = get_user_selection("Finally, choose your test mode.", test_modes, allow_all=False)[0]
+
+    scores = {category: {'correct': 0, 'total': 0} for category in user_selected_categories}
+    questions_to_ask = []
+
+    if "Full Assessment" in chosen_mode:
+        questions_to_ask = [q for q in all_questions if q['category'] in user_selected_categories]
+
+    elif "Targeted Difficulty" in chosen_mode:
+        selected_difficulties = get_user_selection("Which difficulty levels would you like?", DIFFICULTY_LEVELS, allow_all=True)
+        questions_to_ask = [q for q in all_questions if q['category'] in user_selected_categories and q['difficulty'] in selected_difficulties]
+
+    elif "Adaptive Assessment" in chosen_mode:
+        baseline_questions = [q for q in all_questions if q['category'] in user_selected_categories and q['difficulty'] == "Intermediate"]
+        final_baseline = []
+        for cat in user_selected_categories:
+            cat_questions = [q for q in baseline_questions if q['category'] == cat]
+            random.shuffle(cat_questions)
+            final_baseline.extend(cat_questions[:ADAPTIVE_BASELINE_COUNT])
+        
+        print(f"\nStarting with a baseline of {len(final_baseline)} Intermediate questions...")
+        input("Press Enter to begin the adaptive assessment...")
+        
+        scores = run_test(final_baseline, scores)
+        
+        total_correct = sum(scores[cat]['correct'] for cat in user_selected_categories)
+        total_asked = sum(scores[cat]['total'] for cat in user_selected_categories)
+        performance_percent = (total_correct / total_asked) * 100 if total_asked > 0 else 0
+
+        additional_questions = []
+        if performance_percent > 50:
+            print("\nYou're doing great! Let's try some more advanced questions.")
+            difficulties = ["Advanced", "Expert"]
+            additional_questions = [q for q in all_questions if q['category'] in user_selected_categories and q['difficulty'] in difficulties]
+        else:
+            print("\nLet's review some fundamentals.")
+            difficulties = ["Beginner"]
+            additional_questions = [q for q in all_questions if q['category'] in user_selected_categories and q['difficulty'] in difficulties]
+        
+        input("Press Enter to continue...")
+        scores = run_test(additional_questions, scores)
+
+    if "Adaptive Assessment" not in chosen_mode:
+        question_count = len(questions_to_ask)
+        clear_screen()
+        print(f"You have selected a test with {question_count} questions.")
+        input("\nPress Enter to begin...")
+        scores = run_test(questions_to_ask, scores)
+
+    final_results, strongest, second_strongest = calculate_results(scores)
+    display_report(final_results, strongest, second_strongest, all_recommendations, user_interests)

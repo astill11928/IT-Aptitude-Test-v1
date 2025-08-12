@@ -1,4 +1,39 @@
 {
+    "hybrid_roles": [
+        {
+            "name": "DevOps Engineer",
+            "description": "A role that blends software development with IT operations, focusing on automating and streamlining the process of building, testing, and releasing software.",
+            "required_categories": ["Software Development", "Cloud Engineering"],
+            "score_threshold": 60,
+            "recommendation": {
+                "Focus On": "Infrastructure as Code (IaC), CI/CD pipelines, containerization (Docker, Kubernetes), and scripting.",
+                "Certifications & Skills to Explore": ["AWS Certified DevOps Engineer", "Certified Kubernetes Administrator (CKA)", "Terraform Associate Certification"],
+                "Job Titles to Target": ["DevOps Engineer", "Site Reliability Engineer (SRE)", "Cloud Automation Engineer"]
+            }
+        },
+        {
+            "name": "DevSecOps Engineer",
+            "description": "An extension of DevOps that integrates security practices into every phase of the development lifecycle, from initial design through integration, testing, deployment, and software delivery.",
+            "required_categories": ["Software Development", "Cloud Engineering", "Cybersecurity"],
+            "score_threshold": 65,
+            "recommendation": {
+                "Focus On": "Secure coding practices, automating security checks in CI/CD pipelines, and cloud security posture management.",
+                "Certifications & Skills to Explore": ["Certified DevSecOps Professional (CDP)", "AWS Certified Security - Specialty", "Security certifications with a development focus"],
+                "Job Titles to Target": ["DevSecOps Engineer", "Cloud Security Engineer", "Application Security Engineer"]
+            }
+        },
+        {
+            "name": "Cloud Network Engineer",
+            "description": "A specialist who combines networking expertise with cloud architecture to design, implement, and manage secure and scalable cloud-based networks.",
+            "required_categories": ["Network Engineering", "Cloud Engineering"],
+            "score_threshold": 60,
+            "recommendation": {
+                "Focus On": "Virtual Private Clouds (VPCs), cloud firewalls and security groups, software-defined networking (SDN), and hybrid connectivity.",
+                "Certifications & Skills to Explore": ["AWS Certified Advanced Networking - Specialty", "Microsoft Certified: Azure Network Engineer Associate"],
+                "Job Titles to Target": ["Cloud Network Engineer", "Network Architect (Cloud)", "Cloud Network Security Engineer"]
+            }
+        }
+    ],
     "IT Operations & Support": {
         "Beginner": {
             "Focus On": "Foundational troubleshooting, hardware basics, and customer service skills.",
@@ -11,14 +46,14 @@
             "Job Titles to Target": [ "Help Desk Technician", "IT Support Specialist", "Desktop Support Analyst" ]
         },
         "Advanced": {
-            "Focus On": "System administration, scripting for automation (PowerShell/Bash), and infrastructure support.",
-            "Certifications & Skills to Explore": [ "CompTIA Linux+", "CompTIA Server+", "ITIL Foundation" ],
-            "Job Titles to Target": [ "Senior Support Analyst", "Junior System Administrator", "IT Team Lead" ]
+            "Focus On": "Developing leadership skills, managing service delivery, and exploring technical specializations.",
+            "Certifications & Skills to Explore": [ "ITIL Foundation", "Project+ or CAPM", "Explore certifications in your second-strongest category" ],
+            "Job Titles to Target": [ "Senior Support Analyst", "Help Desk Team Lead", "Junior System Administrator" ]
         },
         "Expert": {
-            "Focus On": "IT strategy, infrastructure design, project management, and mentoring.",
-            "Certifications & Skills to Explore": [ "Project+ or PMP", "Advanced PowerShell Scripting", "ITIL Expert" ],
-            "Job Titles to Target": [ "IT Manager", "Systems Architect", "Infrastructure Manager" ]
+            "Focus On": "IT strategy, service management, project leadership, and pivoting to a senior specialized role.",
+            "Certifications & Skills to Explore": [ "Project+ or PMP", "ITIL 4 Managing Professional", "Advanced certifications in your second-strongest category" ],
+            "Job Titles to Target": [ "IT Manager", "Infrastructure Manager", "IT Project Coordinator" ]
         }
     },
     "Network Engineering": {
