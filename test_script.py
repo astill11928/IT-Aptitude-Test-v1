@@ -3,6 +3,7 @@ import os
 import textwrap
 import sys
 import random
+from datetime import datetime
 
 # --- Helper function to handle bundled file paths ---
 def resource_path(relative_path):
@@ -91,11 +92,9 @@ def get_user_selection(prompt_message, selection_list, allow_all=False):
         for i, item in enumerate(selection_list, 1):
             print(f"  {i}) {item}")
         
+        print("\nEnter the numbers of your choices, separated by commas (e.g., 1,3,5).")
         if allow_all:
-            print("\nEnter the numbers of your choices, separated by commas (e.g., 1,3,5).")
             print("Or, type 'all' to select all.")
-        else:
-            print("\nEnter the numbers of your choices, separated by commas (e.g., 2,4).")
 
         user_input = input("\nYour selection: ").lower().strip()
 
@@ -140,6 +139,9 @@ def run_test(questions, scores):
             print("\nCorrect!")
         else:
             print(f"\nIncorrect. The correct answer was {q_data['answer'].upper()}.")
+            # --- New Feature: Display Explanation ---
+            if 'explanation' in q_data and q_data['explanation']:
+                print(f"Explanation: {q_data['explanation']}")
 
         input("\nPress Enter to continue to the next question...")
     return scores
@@ -167,67 +169,64 @@ def calculate_results(scores):
     
     return results, strongest_category, second_strongest_category
 
-def display_report(results, strongest_category, second_strongest_category, recommendations, user_interests):
-    """Displays the final aptitude report and recommendations."""
-    clear_screen()
-    print("=" * 30)
-    print("  Technology Aptitude Report  ")
-    print("=" * 30)
+def generate_report_text(results, strongest_category, second_strongest_category, recommendations, user_interests):
+    """Generates the full report text as a string."""
+    report_lines = []
+    report_lines.append("=" * 30)
+    report_lines.append("  Technology Aptitude Report  ")
+    report_lines.append("=" * 30)
     
     if not results:
-        print("\nNo test sections were completed.")
-        return
+        report_lines.append("\nNo test sections were completed.")
+        return "\n".join(report_lines)
 
-    print("\nThis report highlights your areas of strongest aptitude based on your answers.")
-    print("It is designed to guide your focus, not as a pass/fail evaluation.\n")
+    report_lines.append("\nThis report highlights your areas of strongest aptitude based on your answers.")
+    report_lines.append("It is designed to guide your focus, not as a pass/fail evaluation.\n")
 
     for category, data in results.items():
-        print(f"  - {category}: {data['score']}% ({data['proficiency']} Proficiency)")
+        report_lines.append(f"  - {category}: {data['score']}% ({data['proficiency']} Proficiency)")
 
-    print("\n" + "=" * 50)
-    print("\nInterest vs. Aptitude Analysis:")
+    report_lines.append("\n" + "=" * 50)
+    report_lines.append("\nInterest vs. Aptitude Analysis:")
     if strongest_category in user_interests:
-        print(f"Great news! Your strongest aptitude in '{strongest_category}' aligns with your stated interests.")
-        print("This is a strong indicator that you should focus your career development in this area.")
+        report_lines.append(f"Great news! Your strongest aptitude in '{strongest_category}' aligns with your stated interests.")
+        report_lines.append("This is a strong indicator that you should focus your career development in this area.")
     else:
-        print(f"Your results show a strong aptitude for '{strongest_category}'.")
-        print(f"While this differs from your stated interest(s) in {', '.join(user_interests)},")
-        print("it highlights a potential natural talent you could explore further.")
+        report_lines.append(f"Your results show a strong aptitude for '{strongest_category}'.")
+        report_lines.append(f"While this differs from your stated interest(s) in {', '.join(user_interests)},")
+        report_lines.append("it highlights a potential natural talent you could explore further.")
     
-    print("\n" + "=" * 50)
-    print(f"\nPrimary Recommendation (Based on your strongest aptitude: {strongest_category})\n")
+    report_lines.append("\n" + "=" * 50)
+    report_lines.append(f"\nPrimary Recommendation (Based on your strongest aptitude: {strongest_category})\n")
 
     proficiency_of_strongest = results[strongest_category]['proficiency']
     
     if strongest_category in recommendations and proficiency_of_strongest in recommendations[strongest_category]:
         rec = recommendations[strongest_category][proficiency_of_strongest]
-        print(f"**Focus On:** {rec['Focus On']}")
-        print("\n**Certifications & Skills to Explore:**")
+        report_lines.append(f"**Focus On:** {rec['Focus On']}")
+        report_lines.append("\n**Certifications & Skills to Explore:**")
         for cert in rec['Certifications & Skills to Explore']:
-            print(f"  - {cert}")
-        print("\n**Job Titles to Target:**")
+            report_lines.append(f"  - {cert}")
+        report_lines.append("\n**Job Titles to Target:**")
         for title in rec['Job Titles to Target']:
-            print(f"  - {title}")
+            report_lines.append(f"  - {title}")
     else:
-        print("Could not retrieve recommendations for your strongest category.")
+        report_lines.append("Could not retrieve recommendations for your strongest category.")
 
     if second_strongest_category:
-        print("\n" + "=" * 50)
-        print("\nYour Secondary Strength & Complementary Skills\n")
-        print(f"Your results also show a strong aptitude for '{second_strongest_category}'.")
-        print("Skills in this area often complement your primary strength and can lead to powerful career combinations.")
-        print("Consider exploring this as a future specialization or as a way to enhance your primary skill set.")
+        report_lines.append("\n" + "=" * 50)
+        report_lines.append("\nYour Secondary Strength & Complementary Skills\n")
+        report_lines.append(f"Your results also show a strong aptitude for '{second_strongest_category}'.")
+        report_lines.append("Skills in this area often complement your primary strength and can lead to powerful career combinations.")
+        report_lines.append("Consider exploring this as a future specialization or as a way to enhance your primary skill set.")
 
-    # --- New Feature: Hybrid Role Analysis ---
     if 'hybrid_roles' in recommendations:
         hybrid_recommendations = []
         for role in recommendations['hybrid_roles']:
             is_match = True
-            # Check if all required categories for the hybrid role were tested
             if not all(cat in results for cat in role['required_categories']):
                 is_match = False
                 continue
-            # Check if scores meet the threshold
             for req_cat in role['required_categories']:
                 if results[req_cat]['score'] < role['score_threshold']:
                     is_match = False
@@ -236,46 +235,62 @@ def display_report(results, strongest_category, second_strongest_category, recom
                 hybrid_recommendations.append(role)
         
         if hybrid_recommendations:
-            print("\n" + "=" * 50)
-            print("\nPotential Hybrid Roles\n")
-            print("Your scores indicate a strong aptitude for the following hybrid roles:")
+            report_lines.append("\n" + "=" * 50)
+            report_lines.append("\nPotential Hybrid Roles\n")
+            report_lines.append("Your scores indicate a strong aptitude for the following hybrid roles:")
             for role in hybrid_recommendations:
-                print(f"\n--- {role['name']} ---")
-                print(f"Description: {role['description']}")
+                report_lines.append(f"\n--- {role['name']} ---")
+                report_lines.append(f"Description: {role['description']}")
                 rec = role['recommendation']
-                print(f"\n**Focus On:** {rec['Focus On']}")
-                print("\n**Certifications & Skills to Explore:**")
+                report_lines.append(f"\n**Focus On:** {rec['Focus On']}")
+                report_lines.append("\n**Certifications & Skills to Explore:**")
                 for cert in rec['Certifications & Skills to Explore']:
-                    print(f"  - {cert}")
-                print("\n**Job Titles to Target:**")
+                    report_lines.append(f"  - {cert}")
+                report_lines.append("\n**Job Titles to Target:**")
                 for title in rec['Job Titles to Target']:
-                    print(f"  - {title}")
+                    report_lines.append(f"  - {title}")
 
     taken_categories = set(results.keys())
     all_test_categories = set(ALL_CATEGORIES)
     not_taken_categories = all_test_categories - taken_categories
 
     if not_taken_categories:
-        print("\n" + "=" * 50)
-        print("\nOther Areas to Explore:")
-        print("Consider taking these sections in the future to discover other strengths:")
+        report_lines.append("\n" + "=" * 50)
+        report_lines.append("\nOther Areas to Explore:")
+        report_lines.append("Consider taking these sections in the future to discover other strengths:")
         for category in sorted(list(not_taken_categories)):
-            print(f"  - {category}")
+            report_lines.append(f"  - {category}")
 
-    print("\n" + "=" * 50)
-    print("\nThank you for taking the test!")
-    input("\nPress Enter to exit.")
+    report_lines.append("\n" + "=" * 50)
+    report_lines.append("\nThank you for taking the test!")
+    return "\n".join(report_lines)
+
+def save_report_to_file(report_text):
+    """Saves the report text to a timestamped file."""
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    filename = f"Aptitude_Report_{timestamp}.txt"
+    try:
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(report_text)
+        print(f"\nReport successfully saved as {filename}")
+    except Exception as e:
+        print(f"\nAn error occurred while saving the report: {e}")
 
 # --- Main Execution ---
 if __name__ == "__main__":
     all_questions = load_json_data(QUESTIONS_FILE)
     all_recommendations = load_json_data(RECOMMENDATIONS_FILE)
     
-    user_interests = get_user_selection("First, tell us which areas you are most interested in pursuing.", ALL_CATEGORIES, allow_all=False)
-    user_selected_categories = get_user_selection("Next, select the categories you want to be tested on.", ALL_CATEGORIES, allow_all=True)
+    selection_prompt = (
+        "Please select the categories you are interested in.\n"
+        "NOTE: You will be tested on the sections you choose."
+    )
+    user_selections = get_user_selection(selection_prompt, ALL_CATEGORIES, allow_all=True)
+    user_interests = user_selections
+    user_selected_categories = user_selections
     
     test_modes = ["Full Assessment (All difficulties)", "Targeted Difficulty (You choose levels)", "Adaptive Assessment (Starts at Intermediate and adjusts)"]
-    chosen_mode = get_user_selection("Finally, choose your test mode.", test_modes, allow_all=False)[0]
+    chosen_mode = get_user_selection("Next, choose your test mode.", test_modes, allow_all=False)[0]
 
     scores = {category: {'correct': 0, 'total': 0} for category in user_selected_categories}
     questions_to_ask = []
@@ -325,4 +340,23 @@ if __name__ == "__main__":
         scores = run_test(questions_to_ask, scores)
 
     final_results, strongest, second_strongest = calculate_results(scores)
-    display_report(final_results, strongest, second_strongest, all_recommendations, user_interests)
+    
+    # Generate the report text first
+    report_string = generate_report_text(final_results, strongest, second_strongest, all_recommendations, user_interests)
+    
+    # Display the report on screen
+    clear_screen()
+    print(report_string)
+
+    # --- New Feature: Save Report ---
+    while True:
+        save_choice = input("\nWould you like to save this report to a text file? (y/n): ").lower().strip()
+        if save_choice in ['y', 'yes']:
+            save_report_to_file(report_string)
+            break
+        elif save_choice in ['n', 'no']:
+            break
+        else:
+            print("Invalid input. Please enter 'y' or 'n'.")
+
+    input("\nPress Enter to exit.")

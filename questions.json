@@ -2,673 +2,769 @@
     {
         "category": "IT Operations & Support",
         "difficulty": "Beginner",
-        "question": "A user's PC is slow when multiple apps are open. Which component is likely the bottleneck for holding active program data?",
-        "options": { "a": "Power Supply Unit (PSU)", "b": "Case Fan", "c": "Solid-State Drive (SSD)", "d": "Random-Access Memory (RAM)" },
-        "answer": "d"
-    },
-    {
-        "category": "IT Operations & Support",
-        "difficulty": "Beginner",
-        "question": "Which core software component is responsible for managing all hardware, software, and user interface functions on a computer?",
-        "options": { "a": "Operating System (OS)", "b": "Device Driver", "c": "Web Browser", "d": "Firmware (BIOS/UEFI)" },
-        "answer": "a"
-    },
-    {
-        "category": "IT Operations & Support",
-        "difficulty": "Beginner",
-        "question": "A technician needs to connect a standard external keyboard to a modern laptop. Which common port type would be used?",
-        "options": { "a": "USB Port", "b": "VGA Port", "c": "Ethernet Port", "d": "Serial Port" },
-        "answer": "a"
-    },
-    {
-        "category": "IT Operations & Support",
-        "difficulty": "Beginner",
-        "question": "What is the most critical first step in the troubleshooting methodology after an issue has been reported?",
-        "options": { "a": "Immediately restart the computer", "b": "Establish a theory of cause", "c": "Gather information from the user", "d": "Document the final resolution" },
-        "answer": "c"
-    },
-    {
-        "category": "IT Operations & Support",
-        "difficulty": "Intermediate",
         "question": "A Windows PC displays a 'No OS Found' error. Which utility is best for repairing the boot sectors and file system integrity?",
         "options": { "a": "Task Manager", "b": "Event Viewer", "c": "Windows Recovery Environment", "d": "Resource Monitor" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "The Windows Recovery Environment contains tools like 'bootrec.exe' specifically designed to repair boot issues."
     },
     {
         "category": "IT Operations & Support",
-        "difficulty": "Intermediate",
+        "difficulty": "Beginner",
         "question": "An admin needs to enforce a consistent password policy for an entire department in a domain. Which tool is best for this?",
         "options": { "a": "Group Policy Management", "b": "Task Scheduler", "c": "Local Security Policy", "d": "Registry Editor" },
-        "answer": "a"
+        "answer": "a",
+        "explanation": "Group Policy is the standard tool in a Windows Domain for centrally managing user and computer configurations."
     },
     {
         "category": "IT Operations & Support",
-        "difficulty": "Intermediate",
+        "difficulty": "Beginner",
         "question": "A user's print jobs vanish from the queue without printing, while others can use the same network printer. Which local service should be checked first?",
         "options": { "a": "DHCP Client", "b": "Windows Update", "c": "DNS Client", "d": "Print Spooler" },
-        "answer": "d"
+        "answer": "d",
+        "explanation": "The Print Spooler service manages all print jobs on a local Windows machine and is a common point of failure."
     },
     {
         "category": "IT Operations & Support",
-        "difficulty": "Intermediate",
+        "difficulty": "Beginner",
         "question": "What is the primary performance advantage of an SSD over a traditional HDD?",
         "options": { "a": "Faster data access speeds", "b": "Longer operational lifespan", "c": "Higher storage capacity", "d": "Lower cost per gigabyte" },
-        "answer": "a"
+        "answer": "a",
+        "explanation": "SSDs use flash memory with no moving parts, allowing for significantly faster data read and write operations."
     },
     {
         "category": "IT Operations & Support",
-        "difficulty": "Advanced",
+        "difficulty": "Intermediate",
         "question": "An administrator is scripting a task to run at the same time every day on a Windows Server. Which tool should be used to schedule this script?",
         "options": { "a": "Event Viewer", "b": "Task Scheduler", "c": "Performance Monitor", "d": "Registry Editor" },
-        "answer": "b"
+        "answer": "b",
+        "explanation": "Task Scheduler is the native Windows tool designed specifically for scheduling automated tasks and scripts."
     },
     {
         "category": "IT Operations & Support",
-        "difficulty": "Advanced",
+        "difficulty": "Intermediate",
         "question": "A company wants to ensure its IT service management aligns with global best practices for quality and efficiency. Which framework would they most likely adopt?",
         "options": { "a": "Agile", "b": "Scrum", "c": "Six Sigma", "d": "ITIL" },
-        "answer": "d"
+        "answer": "d",
+        "explanation": "ITIL (Information Technology Infrastructure Library) is the most widely accepted framework for IT service management (ITSM)."
     },
     {
         "category": "IT Operations & Support",
-        "difficulty": "Advanced",
+        "difficulty": "Intermediate",
         "question": "What is the primary function of a Type 1 hypervisor in a data center environment?",
         "options": { "a": "Run directly on server hardware", "b": "Manage physical disk partitions", "c": "Operate within a host OS", "d": "Provide a GUI for remote access" },
-        "answer": "a"
+        "answer": "a",
+        "explanation": "Type 1 hypervisors, or 'bare-metal' hypervisors, run directly on the host's hardware for maximum performance."
     },
     {
         "category": "IT Operations & Support",
-        "difficulty": "Advanced",
+        "difficulty": "Intermediate",
         "question": "A legal hold has been placed on a user's workstation. Which method of data disposal is most appropriate for the hard drive after imaging?",
         "options": { "a": "Standard formatting", "b": "Physical destruction", "c": "Secure impound", "d": "Deleting user files" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "For legal holds, the original evidence must be preserved securely and unaltered, which is known as impounding."
     },
     {
         "category": "IT Operations & Support",
-        "difficulty": "Expert",
+        "difficulty": "Advanced",
         "question": "When designing a VDI solution for graphic designers who use GPU-intensive applications, which technology is most critical to implement?",
         "options": { "a": "Increased RAM allocation", "b": "GPU virtualization (vGPU)", "c": "A faster storage array", "d": "A 10GbE network connection" },
-        "answer": "b"
+        "answer": "b",
+        "explanation": "vGPU technology allows a physical GPU to be shared among multiple virtual desktops, providing necessary graphics performance."
     },
     {
         "category": "IT Operations & Support",
-        "difficulty": "Expert",
-        "question": "A major service outage was caused by a recent configuration change. Which ITIL process is primarily focused on preventing such incidents?",
+        "difficulty": "Advanced",
+        "question": "A major service outage was caused by an unauthorized configuration change. Which ITIL process is primarily focused on preventing such incidents?",
         "options": { "a": "Incident Management", "b": "Problem Management", "c": "Change Management", "d": "Service Level Management" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "Change Management is the ITIL process responsible for controlling the lifecycle of all changes to prevent service disruption."
     },
     {
         "category": "IT Operations & Support",
-        "difficulty": "Expert",
+        "difficulty": "Advanced",
         "question": "What is the primary purpose of the 'RPO' (Recovery Point Objective) metric in a disaster recovery plan?",
         "options": { "a": "The maximum tolerable data loss", "b": "The time it takes to recover", "c": "The average time between failures", "d": "The cost of the recovery solution" },
-        "answer": "a"
+        "answer": "a",
+        "explanation": "RPO defines the maximum acceptable amount of data loss an application can tolerate, measured in time."
+    },
+    {
+        "category": "IT Operations & Support",
+        "difficulty": "Advanced",
+        "question": "An administrator needs to automate the deployment of a multi-tier application across 50 servers. Which approach is most scalable and repeatable?",
+        "options": { "a": "Manually configuring each server", "b": "Writing a custom PowerShell script", "c": "Using a configuration management tool", "d": "Cloning a single master VM" },
+        "answer": "c",
+        "explanation": "Configuration management tools (like Ansible, Puppet, Chef) are designed for automating and enforcing consistent states at scale."
     },
     {
         "category": "IT Operations & Support",
         "difficulty": "Expert",
-        "question": "An administrator needs to automate the deployment of a multi-tier application across 50 servers. Which approach is most scalable and repeatable?",
-        "options": { "a": "Manually configuring each server", "b": "Writing a custom PowerShell script", "c": "Using a configuration management tool", "d": "Cloning a single master VM" },
-        "answer": "c"
+        "question": "An organization is planning to migrate its on-premises servers to a hybrid cloud model. Which of the following is a primary strategic consideration?",
+        "options": { "a": "The color scheme of the server racks", "b": "The brand of the new cloud servers", "c": "Data sovereignty and compliance requirements", "d": "The font used in the command line" },
+        "answer": "c",
+        "explanation": "Data sovereignty dictates that data is subject to the laws of the country in which it is located, a critical factor in cloud design."
+    },
+    {
+        "category": "IT Operations & Support",
+        "difficulty": "Expert",
+        "question": "What is the primary business driver for implementing an IT asset management (ITAM) program in a large enterprise?",
+        "options": { "a": "To track employee birthdays", "b": "To optimize software licensing costs and reduce risk", "c": "To increase the number of IT support tickets", "d": "To choose the default web browser for employees" },
+        "answer": "b",
+        "explanation": "ITAM provides visibility into hardware and software assets, which is crucial for optimizing costs and ensuring compliance."
+    },
+    {
+        "category": "IT Operations & Support",
+        "difficulty": "Expert",
+        "question": "A company is experiencing frequent, recurring IT incidents. Which ITIL process is specifically designed to identify and address the underlying causes of these incidents?",
+        "options": { "a": "Incident Management", "b": "Change Management", "c": "Problem Management", "d": "Service Catalog Management" },
+        "answer": "c",
+        "explanation": "Problem Management focuses on finding and fixing the root cause of recurring incidents to prevent them from happening again."
+    },
+    {
+        "category": "IT Operations & Support",
+        "difficulty": "Expert",
+        "question": "An IT leader needs to present a business case for a major infrastructure upgrade. Which metric would be most effective in justifying the expenditure to senior management?",
+        "options": { "a": "The number of lines of code in the server OS", "b": "The server uptime percentage", "c": "The total cost of ownership (TCO) and return on investment (ROI)", "d": "The physical size of the new servers" },
+        "answer": "c",
+        "explanation": "TCO and ROI are financial metrics that directly translate technology investments into business value, which is crucial for executive decisions."
     },
     {
         "category": "Network Engineering",
         "difficulty": "Beginner",
-        "question": "Which network service is responsible for automatically assigning IP addresses to computers on a network?",
-        "options": { "a": "DNS", "b": "NTP", "c": "DHCP", "d": "SMB" },
-        "answer": "c"
-    },
-    {
-        "category": "Network Engineering",
-        "difficulty": "Beginner",
-        "question": "Which device is used to forward traffic between different IP networks, operating at Layer 3 of the OSI model?",
-        "options": { "a": "Hub", "b": "Router", "c": "Switch", "d": "Bridge" },
-        "answer": "b"
-    },
-    {
-        "category": "Network Engineering",
-        "difficulty": "Beginner",
-        "question": "Which command-line tool is primarily used to test basic connectivity and reachability of a network host?",
-        "options": { "a": "ping", "b": "netstat", "c": "ipconfig", "d": "nslookup" },
-        "answer": "a"
-    },
-    {
-        "category": "Network Engineering",
-        "difficulty": "Beginner",
-        "question": "What is the primary function of the Domain Name System (DNS) in networking?",
-        "options": { "a": "Assign IP addresses", "b": "Encrypt network traffic", "c": "Filter web content", "d": "Resolve domain names to IP addresses" },
-        "answer": "d"
-    },
-    {
-        "category": "Network Engineering",
-        "difficulty": "Intermediate",
         "question": "An administrator needs to logically segment a single physical switch into multiple separate broadcast domains. Which technology should be used?",
         "options": { "a": "VPN", "b": "NAT", "c": "VLAN", "d": "Subnetting" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "VLANs (Virtual LANs) are used to create separate logical networks on a single physical switch."
     },
     {
         "category": "Network Engineering",
-        "difficulty": "Intermediate",
+        "difficulty": "Beginner",
         "question": "Which transport protocol prioritizes speed over reliability, making it suitable for services like VoIP and online gaming?",
         "options": { "a": "TCP", "b": "ICMP", "c": "ARP", "d": "UDP" },
-        "answer": "d"
+        "answer": "d",
+        "explanation": "UDP (User Datagram Protocol) is connectionless and does not guarantee packet delivery, making it faster for real-time applications."
     },
     {
         "category": "Network Engineering",
-        "difficulty": "Intermediate",
+        "difficulty": "Beginner",
         "question": "What is the primary purpose of Network Address Translation (NAT)?",
         "options": { "a": "Allow private IPs to share one public IP", "b": "Encrypt all outgoing data packets", "c": "Assign hostnames to network devices", "d": "Create a physical network diagram" },
-        "answer": "a"
+        "answer": "a",
+        "explanation": "NAT allows multiple devices on a private network to share a single public IP address for internet access."
     },
     {
         "category": "Network Engineering",
-        "difficulty": "Intermediate",
+        "difficulty": "Beginner",
         "question": "What is the term for a switch port that is configured to carry traffic for multiple VLANs simultaneously?",
         "options": { "a": "Access Port", "b": "Mirrored Port", "c": "Spanning Tree Port", "d": "Trunk Port" },
-        "answer": "d"
+        "answer": "d",
+        "explanation": "A trunk port is a link between two switches that is configured to pass traffic for multiple VLANs."
     },
     {
         "category": "Network Engineering",
-        "difficulty": "Advanced",
-        "question": "In a network with redundant links between switches, which protocol is used to prevent broadcast storms by logically blocking loops?",
+        "difficulty": "Intermediate",
+        "question": "In a network with redundant links, which protocol prevents loops by creating a single, loop-free logical topology?",
         "options": { "a": "OSPF", "b": "STP", "c": "BGP", "d": "ARP" },
-        "answer": "b"
+        "answer": "b",
+        "explanation": "STP (Spanning Tree Protocol) is designed to prevent switching loops in networks with redundant paths."
     },
     {
         "category": "Network Engineering",
-        "difficulty": "Advanced",
-        "question": "Which of the following is an interior gateway, link-state routing protocol common in large enterprise networks?",
+        "difficulty": "Intermediate",
+        "question": "An engineer needs to implement a link-state routing protocol in a large, multi-area enterprise network. Which protocol is most suitable?",
         "options": { "a": "BGP", "b": "RIP", "c": "OSPF", "d": "Static Route" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "OSPF (Open Shortest Path First) is a scalable link-state protocol ideal for large, hierarchical enterprise networks."
     },
     {
         "category": "Network Engineering",
-        "difficulty": "Advanced",
-        "question": "A technician needs to identify the specific network path and measure packet delays to a destination server. Which tool is best for this?",
-        "options": { "a": "ping", "b": "ipconfig", "c": "traceroute", "d": "netstat" },
-        "answer": "c"
+        "difficulty": "Intermediate",
+        "question": "To provide a highly available default gateway for a subnet, an administrator should implement which type of protocol?",
+        "options": { "a": "FHRP", "b": "STP", "c": "LACP", "d": "BGP" },
+        "answer": "a",
+        "explanation": "FHRPs (First Hop Redundancy Protocols) like HSRP and VRRP provide a virtual, redundant default gateway."
     },
     {
         "category": "Network Engineering",
-        "difficulty": "Advanced",
+        "difficulty": "Intermediate",
         "question": "Which protocol is fundamental to the internet's operation, managing routing between different Autonomous Systems (AS)?",
         "options": { "a": "BGP", "b": "EIGRP", "c": "OSPF", "d": "IS-IS" },
-        "answer": "a"
+        "answer": "a",
+        "explanation": "BGP (Border Gateway Protocol) is the exterior gateway protocol used to exchange routing information across the internet."
+    },
+    {
+        "category": "Network Engineering",
+        "difficulty": "Advanced",
+        "question": "What is a key architectural benefit of a spine-leaf network topology compared to a traditional three-tier model in a data center?",
+        "options": { "a": "It reduces the number of required switches", "b": "It provides predictable latency and high east-west bandwidth", "c": "It is easier to manage for north-south traffic", "d": "It relies on older, more stable protocols" },
+        "answer": "b",
+        "explanation": "Spine-leaf architecture is optimized for east-west traffic (server-to-server communication) within a data center."
+    },
+    {
+        "category": "Network Engineering",
+        "difficulty": "Advanced",
+        "question": "An engineer is configuring a GRE tunnel between two sites. What is the primary purpose of this technology?",
+        "options": { "a": "To encrypt all traffic between the sites", "b": "To encapsulate a wide variety of network layer protocols inside virtual point-to-point links", "c": "To provide a physical connection between the sites", "d": "To assign IP addresses to devices at the remote site" },
+        "answer": "b",
+        "explanation": "GRE (Generic Routing Encapsulation) is a tunneling protocol that can encapsulate various protocol packet types."
+    },
+    {
+        "category": "Network Engineering",
+        "difficulty": "Advanced",
+        "question": "When configuring OSPF in a broadcast multi-access network, what is the role of the Designated Router (DR)?",
+        "options": { "a": "To act as the default gateway for all hosts", "b": "To form adjacencies with all other routers and reduce the amount of LSA flooding", "c": "To connect the OSPF domain to an external network", "d": "To provide IP addresses to other routers" },
+        "answer": "b",
+        "explanation": "The DR minimizes the number of adjacencies in an OSPF network, which reduces routing protocol traffic."
+    },
+    {
+        "category": "Network Engineering",
+        "difficulty": "Advanced",
+        "question": "What is the primary function of a data modeling language like YANG in the context of network automation?",
+        "options": { "a": "To write executable scripts for device configuration", "b": "To define the structure, syntax, and semantics of network configuration data", "c": "To provide a secure transport for configuration changes", "d": "To store historical network performance data" },
+        "answer": "b",
+        "explanation": "YANG is used to create a standardized, machine-readable model of network configuration and state data."
     },
     {
         "category": "Network Engineering",
         "difficulty": "Expert",
-        "question": "What is a key architectural benefit of Software-Defined Networking (SDN)?",
-        "options": { "a": "It uses more powerful hardware", "b": "It requires manual configuration", "c": "It eliminates physical cabling", "d": "It centralizes network control" },
-        "answer": "d"
+        "question": "An architect is designing a network for a large enterprise and needs to ensure that routing updates from one department do not impact another. Which OSPF concept is critical for this design?",
+        "options": { "a": "Using a single backbone area", "b": "Implementing multiple areas", "c": "Configuring a higher router priority", "d": "Using a different routing protocol" },
+        "answer": "b",
+        "explanation": "Segmenting an OSPF network into multiple areas limits the scope of routing updates and improves stability."
     },
     {
         "category": "Network Engineering",
         "difficulty": "Expert",
-        "question": "A network is experiencing poor VoIP quality. Which mechanism should be used to prioritize this latency-sensitive traffic?",
-        "options": { "a": "NAT", "b": "ACL", "c": "VPN", "d": "QoS" },
-        "answer": "d"
+        "question": "What is the primary advantage of using eBGP over iBGP in a multi-homed internet environment?",
+        "options": { "a": "It has a lower administrative distance", "b": "It is used to exchange routing information between different Autonomous Systems", "c": "It requires a full mesh of connections", "d": "It is easier to configure for a single provider" },
+        "answer": "b",
+        "explanation": "eBGP is for routing between different ASes (like your company and an ISP), while iBGP is for routing within a single AS."
     },
     {
         "category": "Network Engineering",
         "difficulty": "Expert",
-        "question": "To provide a redundant default gateway in a subnet without requiring client reconfiguration, which type of protocol should be implemented?",
-        "options": { "a": "First Hop Redundancy Protocol", "b": "Dynamic routing protocol", "c": "Spanning Tree Protocol", "d": "Link Aggregation Protocol" },
-        "answer": "a"
+        "question": "A network engineer needs to monitor traffic from a specific server port without impacting performance. Which switch feature is most appropriate for this task?",
+        "options": { "a": "Port security", "b": "VLAN trunking", "c": "Port mirroring (SPAN)", "d": "Link aggregation" },
+        "answer": "c",
+        "explanation": "SPAN (Switched Port Analyzer) copies traffic from one port to another for analysis without being in-line."
     },
     {
         "category": "Network Engineering",
         "difficulty": "Expert",
-        "question": "An enterprise requires a WAN connection with guaranteed performance for critical applications. Which technology uses labels for forwarding decisions to meet these requirements?",
-        "options": { "a": "Site-to-Site VPN", "b": "MPLS", "c": "Remote Desktop", "d": "DHCP" },
-        "answer": "b"
+        "question": "What is the primary function of VXLAN in a modern data center network?",
+        "options": { "a": "To encrypt all traffic between virtual machines", "b": "To overcome the scalability limitations of VLANs by creating a Layer 2 overlay network on top of a Layer 3 underlay", "c": "To provide a physical connection between data centers", "d": "To manage user authentication for network access" },
+        "answer": "b",
+        "explanation": "VXLAN (Virtual Extensible LAN) allows for the creation of a massive number of logical Layer 2 networks, ideal for cloud environments."
     },
     {
         "category": "Cybersecurity",
         "difficulty": "Beginner",
-        "question": "Which security device is primarily responsible for filtering traffic between a trusted internal network and an untrusted external network?",
-        "options": { "a": "Load Balancer", "b": "Proxy Server", "c": "Firewall", "d": "DNS Server" },
-        "answer": "c"
-    },
-    {
-        "category": "Cybersecurity",
-        "difficulty": "Beginner",
-        "question": "What is the primary security advantage of using HTTPS over HTTP?",
-        "options": { "a": "Faster page loading", "b": "Ad blocking", "c": "Malware scanning", "d": "Traffic encryption" },
-        "answer": "d"
-    },
-    {
-        "category": "Cybersecurity",
-        "difficulty": "Beginner",
-        "question": "Which of the following describes the most effective password?",
-        "options": { "a": "A common dictionary word", "b": "A user's birthdate", "c": "A reused password", "d": "A long, complex string" },
-        "answer": "d"
-    },
-    {
-        "category": "Cybersecurity",
-        "difficulty": "Beginner",
-        "question": "What is the general term for software designed with malicious intent, such as viruses, worms, and ransomware?",
-        "options": { "a": "Malware", "b": "Adware", "c": "Firmware", "d": "Shareware" },
-        "answer": "a"
-    },
-    {
-        "category": "Cybersecurity",
-        "difficulty": "Intermediate",
         "question": "An employee receives an urgent, targeted email that appears to be from a known colleague, asking for sensitive information. This is an example of what type of attack?",
         "options": { "a": "DDoS attack", "b": "Spear phishing", "c": "SQL Injection", "d": "Man-in-the-middle" },
-        "answer": "b"
+        "answer": "b",
+        "explanation": "Spear phishing is a targeted form of phishing that impersonates a trusted individual to gain specific information."
     },
     {
         "category": "Cybersecurity",
-        "difficulty": "Intermediate",
+        "difficulty": "Beginner",
         "question": "Which wireless security standard is the current industry standard for securing Wi-Fi networks?",
         "options": { "a": "WPA2", "b": "WPA", "c": "WEP", "d": "WPS" },
-        "answer": "a"
+        "answer": "a",
+        "explanation": "WPA2 (Wi-Fi Protected Access 2) is the established security protocol for wireless networks, with WPA3 being the successor."
     },
     {
         "category": "Cybersecurity",
-        "difficulty": "Intermediate",
+        "difficulty": "Beginner",
         "question": "What security principle dictates that users should only be granted the specific access rights required to perform their job duties?",
         "options": { "a": "Defense in depth", "b": "Open design", "c": "Security through obscurity", "d": "Least privilege" },
-        "answer": "d"
+        "answer": "d",
+        "explanation": "The principle of least privilege is a fundamental concept of limiting user access to the bare minimum required."
+    },
+    {
+        "category": "Cybersecurity",
+        "difficulty": "Beginner",
+        "question": "A network administrator configures a router to block all traffic from a specific IP address range. What is this configuration an example of?",
+        "options": { "a": "A NAT policy", "b": "A VLAN configuration", "c": "A QoS policy", "d": "An Access Control List (ACL)" },
+        "answer": "d",
+        "explanation": "An ACL is a set of rules used to filter network traffic based on criteria like IP address and port number."
     },
     {
         "category": "Cybersecurity",
         "difficulty": "Intermediate",
-        "question": "A network administrator configures a router to block all traffic from a specific IP address range. What is this configuration an example of?",
-        "options": { "a": "A NAT policy", "b": "A VLAN configuration", "c": "A QoS policy", "d": "An Access Control List (ACL)" },
-        "answer": "d"
-    },
-    {
-        "category": "Cybersecurity",
-        "difficulty": "Advanced",
         "question": "A vulnerability that is actively exploited by attackers before the vendor can release a patch is known as what?",
         "options": { "a": "Brute-force attack", "b": "Buffer overflow", "c": "Zero-day vulnerability", "d": "Cross-site scripting" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "A zero-day vulnerability is a flaw that is exploited by attackers before the vendor is aware of it or can fix it."
     },
     {
         "category": "Cybersecurity",
-        "difficulty": "Advanced",
+        "difficulty": "Intermediate",
         "question": "Which security system is designed to actively block or prevent detected malicious network activity in real-time?",
         "options": { "a": "IDS", "b": "Honeypot", "c": "SIEM", "d": "IPS" },
-        "answer": "d"
+        "answer": "d",
+        "explanation": "An IPS (Intrusion Prevention System) is an active system that can stop malicious traffic, unlike an IDS which only detects it."
     },
     {
         "category": "Cybersecurity",
-        "difficulty": "Advanced",
+        "difficulty": "Intermediate",
         "question": "A large corporation uses a central server to verify the unique credentials of each user connecting to its wireless network. Which authentication framework is this?",
         "options": { "a": "WPA2-Enterprise", "b": "WEP", "c": "WPA2-PSK", "d": "WPS" },
-        "answer": "a"
+        "answer": "a",
+        "explanation": "WPA2-Enterprise mode uses a RADIUS server for individual user authentication, making it suitable for corporate environments."
+    },
+    {
+        "category": "Cybersecurity",
+        "difficulty": "Intermediate",
+        "question": "What is the primary function of a Security Information and Event Management (SIEM) tool in a Security Operations Center (SOC)?",
+        "options": { "a": "Perform vulnerability scans", "b": "Provide secure remote access", "c": "Aggregate and correlate log data", "d": "Manage software patches" },
+        "answer": "c",
+        "explanation": "A SIEM centralizes log data from across the enterprise to provide a unified view for security monitoring and analysis."
     },
     {
         "category": "Cybersecurity",
         "difficulty": "Advanced",
-        "question": "What is the primary function of a Security Information and Event Management (SIEM) tool in a Security Operations Center (SOC)?",
-        "options": { "a": "Perform vulnerability scans", "b": "Provide secure remote access", "c": "Aggregate and correlate log data", "d": "Manage software patches" },
-        "answer": "c"
-    },
-    {
-        "category": "Cybersecurity",
-        "difficulty": "Expert",
         "question": "Which activity involves proactively searching for signs of malicious activity within a network that have evaded automated detection?",
         "options": { "a": "Patch management", "b": "User training", "c": "Threat hunting", "d": "Asset management" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "Threat hunting is a proactive security practice focused on finding hidden threats that have bypassed standard defenses."
     },
     {
         "category": "Cybersecurity",
-        "difficulty": "Expert",
+        "difficulty": "Advanced",
         "question": "A file hash, a malicious IP address, and a suspicious domain name are all examples of what?",
         "options": { "a": "Indicators of Compromise (IoCs)", "b": "Security policies", "c": "Access control models", "d": "Encryption algorithms" },
-        "answer": "a"
+        "answer": "a",
+        "explanation": "IoCs are pieces of forensic data that indicate a potential security breach has occurred on a system or network."
     },
     {
         "category": "Cybersecurity",
-        "difficulty": "Expert",
+        "difficulty": "Advanced",
         "question": "What is the primary purpose of maintaining a strict 'chain of custody' in a digital forensics investigation?",
         "options": { "a": "Documenting incident timeline", "b": "Communicating with management", "c": "Ensuring evidence integrity", "d": "Analyzing financial impact" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "The chain of custody provides a detailed log of how evidence was handled to ensure it is admissible in legal proceedings."
+    },
+    {
+        "category": "Cybersecurity",
+        "difficulty": "Advanced",
+        "question": "During a penetration test, using a compromised host to attack other internal systems is known as what technique?",
+        "options": { "a": "Phishing", "b": "Pivoting", "c": "Brute-forcing", "d": "Reconnaissance" },
+        "answer": "b",
+        "explanation": "Pivoting is the technique of using a compromised system as a foothold to gain access to other systems on the same network."
     },
     {
         "category": "Cybersecurity",
         "difficulty": "Expert",
-        "question": "During a penetration test, using a compromised host to attack other internal systems is known as what technique?",
-        "options": { "a": "Phishing", "b": "Pivoting", "c": "Brute-forcing", "d": "Reconnaissance" },
-        "answer": "b"
+        "question": "A security analyst is reviewing firewall logs and sees thousands of TCP SYN packets from a single source IP to a web server, with no corresponding ACK packets. What type of attack is likely occurring?",
+        "options": { "a": "SQL Injection", "b": "Cross-Site Scripting", "c": "SYN Flood (DoS)", "d": "Man-in-the-Middle" },
+        "answer": "c",
+        "explanation": "A SYN flood is a type of denial-of-service attack that overwhelms a server with half-open TCP connections."
     },
     {
-        "category": "Cloud Engineering",
-        "difficulty": "Beginner",
-        "question": "Which cloud service model provides fundamental computing resources like virtual machines, storage, and networking?",
-        "options": { "a": "SaaS", "b": "IaaS", "c": "PaaS", "d": "FaaS" },
-        "answer": "b"
+        "category": "Cybersecurity",
+        "difficulty": "Expert",
+        "question": "What is the primary goal of the 'containment' phase in an incident response plan?",
+        "options": { "a": "To remove the attacker from the network", "b": "To prevent the incident from spreading and causing further damage", "c": "To restore systems to their normal operation", "d": "To identify the root cause of the incident" },
+        "answer": "b",
+        "explanation": "Containment focuses on isolating the affected systems to stop the spread of an attack and prevent further damage."
+    },
+    {
+        "category": "Cybersecurity",
+        "difficulty": "Expert",
+        "question": "A penetration tester is attempting to gain access to a system by sending a specially crafted packet that exploits a vulnerability in a network service. What is this an example of?",
+        "options": { "a": "Social engineering", "b": "Exploitation", "c": "Reconnaissance", "d": "Persistence" },
+        "answer": "b",
+        "explanation": "Exploitation is the phase of a penetration test where a known vulnerability is actively used to gain unauthorized access."
+    },
+    {
+        "category": "Cybersecurity",
+        "difficulty": "Expert",
+        "question": "What is the primary purpose of a 'threat modeling' exercise in a secure software development lifecycle?",
+        "options": { "a": "To test the performance of the application", "b": "To identify and mitigate potential security threats and vulnerabilities early in the design process", "c": "To write the user documentation for the application", "d": "To choose a programming language for the project" },
+        "answer": "b",
+        "explanation": "Threat modeling is a proactive process of identifying potential security threats and designing countermeasures early in development."
     },
     {
         "category": "Cloud Engineering",
         "difficulty": "Beginner",
         "question": "What is a primary financial benefit of using a public cloud provider?",
         "options": { "a": "Increased hardware costs", "b": "More data center staff", "c": "Shift from CapEx to OpEx", "d": "Higher electricity bills" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "The cloud allows companies to pay for IT resources as an operational expense rather than making large upfront capital investments."
     },
     {
         "category": "Cloud Engineering",
         "difficulty": "Beginner",
         "question": "According to the cloud 'Shared Responsibility Model', what is the customer always responsible for securing?",
         "options": { "a": "The physical data center", "b": "Their own data and access", "c": "The network hardware", "d": "The virtualization software" },
-        "answer": "b"
+        "answer": "b",
+        "explanation": "In the shared responsibility model, the customer is always responsible for securing their own data and managing user access."
     },
     {
         "category": "Cloud Engineering",
         "difficulty": "Beginner",
         "question": "What is the term for the cloud's ability to automatically adjust computing resources to match application demand?",
         "options": { "a": "High availability", "b": "Elasticity", "c": "Fault tolerance", "d": "Geo-redundancy" },
-        "answer": "b"
+        "answer": "b",
+        "explanation": "Elasticity is a core cloud benefit that allows resources to scale up or down automatically based on demand."
+    },
+    {
+        "category": "Cloud Engineering",
+        "difficulty": "Beginner",
+        "question": "Which cloud service model provides users with fundamental resources like virtual machines, storage, and networking?",
+        "options": { "a": "SaaS", "b": "IaaS", "c": "PaaS", "d": "FaaS" },
+        "answer": "b",
+        "explanation": "IaaS (Infrastructure as a Service) provides the basic building blocks of cloud IT, including compute, network, and storage."
     },
     {
         "category": "Cloud Engineering",
         "difficulty": "Intermediate",
-        "question": "An organization needs a logically isolated section of a public cloud with its own private IP space. What should be created?",
+        "question": "An organization needs a logically isolated section of a public cloud with its own private IP space. What should they create?",
         "options": { "a": "A new Region", "b": "An Availability Zone", "c": "A public subnet", "d": "A Virtual Private Cloud (VPC)" },
-        "answer": "d"
+        "answer": "d",
+        "explanation": "A VPC allows an organization to provision a logically isolated section of the cloud where they can launch resources."
     },
     {
         "category": "Cloud Engineering",
         "difficulty": "Intermediate",
         "question": "A developer needs a cloud service to run their code without managing the underlying operating system. Which model is most appropriate?",
         "options": { "a": "IaaS", "b": "SaaS", "c": "PaaS", "d": "Colocation" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "PaaS (Platform as a Service) provides a platform for developers to build and run applications without managing infrastructure."
     },
     {
         "category": "Cloud Engineering",
         "difficulty": "Intermediate",
         "question": "Which type of cloud storage is best for hosting large, unstructured data like images and videos, accessed via an API?",
         "options": { "a": "Object storage", "b": "File storage", "c": "Block storage", "d": "Ephemeral storage" },
-        "answer": "a"
+        "answer": "a",
+        "explanation": "Object storage is highly scalable and ideal for unstructured data, making it perfect for backups, archives, and media files."
     },
     {
         "category": "Cloud Engineering",
         "difficulty": "Intermediate",
         "question": "What is the function of a network load balancer in a high-availability cloud setup?",
         "options": { "a": "Encrypt all network traffic", "b": "Distribute traffic across multiple servers", "c": "Provide secure remote access", "d": "Store and manage SSL certificates" },
-        "answer": "b"
+        "answer": "b",
+        "explanation": "A load balancer acts as a single point of contact and distributes incoming traffic to improve application availability and scalability."
     },
     {
         "category": "Cloud Engineering",
         "difficulty": "Advanced",
         "question": "What is the practice of managing and provisioning cloud infrastructure using code and definition files?",
         "options": { "a": "CI/CD", "b": "DevOps", "c": "Agile", "d": "IaC" },
-        "answer": "d"
+        "answer": "d",
+        "explanation": "IaC (Infrastructure as Code) allows for the automation and management of infrastructure through code, enabling repeatability and scalability."
     },
     {
         "category": "Cloud Engineering",
         "difficulty": "Advanced",
         "question": "Which cloud computing model is designed to execute code in response to events without provisioning or managing servers?",
         "options": { "a": "Virtual Machines", "b": "Serverless", "c": "Containers", "d": "Bare Metal" },
-        "answer": "b"
+        "answer": "b",
+        "explanation": "Serverless computing allows developers to run code without managing servers, as the cloud provider handles the infrastructure."
     },
     {
         "category": "Cloud Engineering",
         "difficulty": "Advanced",
         "question": "What is a primary advantage of using containers over traditional virtual machines for application deployment?",
         "options": { "a": "They are more secure by default", "b": "They have better hardware isolation", "c": "They are more lightweight and faster", "d": "They can run a different OS" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "Containers share the host OS kernel, making them much smaller, faster to start, and more resource-efficient than VMs."
     },
     {
         "category": "Cloud Engineering",
         "difficulty": "Advanced",
         "question": "What is the primary goal of a CI/CD pipeline in a DevOps environment?",
         "options": { "a": "To manually review all code", "b": "To manage cloud billing", "c": "To automate application deployment", "d": "To monitor security" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "A CI/CD pipeline automates the build, test, and deployment process, enabling faster and more reliable software releases."
     },
     {
         "category": "Cloud Engineering",
         "difficulty": "Expert",
-        "question": "An organization adopts a multi-cloud strategy primarily to mitigate which of the following risks?",
-        "options": { "a": "Vendor lock-in", "b": "Poor application performance", "c": "High network latency", "d": "Physical security breaches" },
-        "answer": "a"
+        "question": "An architect is designing a multi-region, active-active application for disaster recovery. Which DNS routing policy is best suited for distributing traffic to the nearest healthy region?",
+        "options": { "a": "Simple routing", "b": "Geolocation routing", "c": "Latency-based routing", "d": "Weighted routing" },
+        "answer": "c",
+        "explanation": "Latency-based routing directs users to the region that provides the lowest network latency for the best performance."
     },
     {
         "category": "Cloud Engineering",
         "difficulty": "Expert",
-        "question": "What is the function of a Cloud Access Security Broker (CASB) in an enterprise security architecture?",
-        "options": { "a": "Provide a high-speed connection", "b": "Purchase and manage cloud services", "c": "Act as a security policy enforcement point", "d": "Automatically scale cloud resources" },
-        "answer": "c"
+        "question": "A company needs to establish a dedicated, private, high-bandwidth connection from their on-premises data center to their cloud provider. Which service should they use?",
+        "options": { "a": "A site-to-site VPN", "b": "A direct, private interconnect", "c": "A virtual private network", "d": "A public internet connection" },
+        "answer": "b",
+        "explanation": "A direct interconnect (like AWS Direct Connect or Azure ExpressRoute) provides a dedicated, private fiber connection."
     },
     {
         "category": "Cloud Engineering",
         "difficulty": "Expert",
-        "question": "What is the primary function of a container orchestration tool like Kubernetes?",
-        "options": { "a": "To write application code", "b": "To serve as a container runtime", "c": "To automate container deployment and scaling", "d": "To provide object storage" },
-        "answer": "c"
+        "question": "What is the primary purpose of a 'service mesh' (e.g., Istio) in a microservices architecture?",
+        "options": { "a": "To provide a database for each microservice", "b": "To manage and secure communication between microservices", "c": "To write the application code for each service", "d": "To provide a user interface for the application" },
+        "answer": "b",
+        "explanation": "A service mesh provides a dedicated infrastructure layer for making service-to-service communication safe, fast, and reliable."
     },
     {
         "category": "Cloud Engineering",
         "difficulty": "Expert",
-        "question": "What is the core principle of the 'FinOps' framework in a cloud context?",
-        "options": { "a": "Eliminate all cloud spending", "b": "Bring financial accountability to cloud costs", "c": "A security framework for banks", "d": "Move all operations to one cloud" },
-        "answer": "b"
+        "question": "An architect needs to design a solution that can process a massive stream of real-time data from IoT devices. Which type of cloud service is best suited for this task?",
+        "options": { "a": "A relational database service", "b": "A data streaming service", "c": "A block storage service", "d": "A virtual machine service" },
+        "answer": "b",
+        "explanation": "Data streaming services (like Kinesis or Event Hubs) are designed to ingest and process high-throughput, real-time data streams."
     },
     {
         "category": "Software Development",
         "difficulty": "Beginner",
-        "question": "What is the purpose of a 'variable' in most programming languages?",
-        "options": { "a": "To execute a block of code repeatedly", "b": "To provide a named storage location", "c": "To define an unchangeable constant", "d": "To handle runtime errors" },
-        "answer": "b"
-    },
-    {
-        "category": "Software Development",
-        "difficulty": "Beginner",
-        "question": "Which programming paradigm focuses on organizing code into 'objects' containing both data and methods?",
-        "options": { "a": "Procedural", "b": "Functional", "c": "Declarative", "d": "Object-Oriented" },
-        "answer": "d"
-    },
-    {
-        "category": "Software Development",
-        "difficulty": "Beginner",
-        "question": "What is the role of a 'compiler' in software development?",
-        "options": { "a": "To execute script code line-by-line", "b": "To automatically find and fix all bugs", "c": "To translate source code into machine code", "d": "To provide a user interface" },
-        "answer": "c"
-    },
-    {
-        "category": "Software Development",
-        "difficulty": "Beginner",
-        "question": "What is the primary purpose of a 'function' in programming?",
-        "options": { "a": "To store a single piece of data", "b": "To represent a conditional branch", "c": "To manage project dependencies", "d": "To create a reusable block of code" },
-        "answer": "d"
-    },
-    {
-        "category": "Software Development",
-        "difficulty": "Intermediate",
         "question": "What is the key difference between a list/array and a dictionary/hash map?",
         "options": { "a": "Lists are ordered, dictionaries use key-value pairs", "b": "Lists only store numbers", "c": "Lists are immutable", "d": "Lists are for loops" },
-        "answer": "a"
+        "answer": "a",
+        "explanation": "A list is an ordered collection accessed by an integer index, while a dictionary is an unordered collection of key-value pairs."
     },
     {
         "category": "Software Development",
-        "difficulty": "Intermediate",
+        "difficulty": "Beginner",
         "question": "What is the primary function of an Application Programming Interface (API)?",
         "options": { "a": "To provide a graphical user interface", "b": "To manage server hardware", "c": "To allow different software to communicate", "d": "To compile source code" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "An API defines a set of rules and protocols that allow different software applications to communicate with each other."
     },
     {
         "category": "Software Development",
-        "difficulty": "Intermediate",
+        "difficulty": "Beginner",
         "question": "In Object-Oriented Programming, what is the concept of 'encapsulation'?",
         "options": { "a": "The ability to inherit properties", "b": "The ability to take many forms", "c": "The bundling of data and methods", "d": "The process of storing an object" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "Encapsulation is the bundling of data and the methods that operate on that data into a single unit, or 'object'."
     },
     {
         "category": "Software Development",
-        "difficulty": "Intermediate",
+        "difficulty": "Beginner",
         "question": "What is the purpose of a `try...catch` block in exception handling?",
         "options": { "a": "To improve loop performance", "b": "To declare a new variable", "c": "To connect to a database", "d": "To manage code errors gracefully" },
-        "answer": "d"
+        "answer": "d",
+        "explanation": "A try...catch block allows a program to handle errors and exceptions without crashing."
     },
     {
         "category": "Software Development",
-        "difficulty": "Advanced",
+        "difficulty": "Intermediate",
         "question": "What is the primary function of a 'data structure' in computer science?",
         "options": { "a": "To define application layout", "b": "A network communication standard", "c": "To organize data for efficient use", "d": "A software development methodology" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "A data structure is a way of organizing, managing, and storing data to enable efficient access and modification."
     },
     {
         "category": "Software Development",
-        "difficulty": "Advanced",
+        "difficulty": "Intermediate",
         "question": "What does 'Big O' notation describe?",
         "options": { "a": "An algorithm's complexity", "b": "Software version number", "c": "Application size in megabytes", "d": "The number of lines of code" },
-        "answer": "a"
+        "answer": "a",
+        "explanation": "Big O notation is used to describe the performance or complexity of an algorithm as the input size grows."
     },
     {
         "category": "Software Development",
-        "difficulty": "Advanced",
+        "difficulty": "Intermediate",
         "question": "What is the primary purpose of a version control system like Git?",
         "options": { "a": "To automatically fix bugs", "b": "To manage project budgets", "c": "To deploy applications", "d": "To track source code changes" },
-        "answer": "d"
+        "answer": "d",
+        "explanation": "Version control systems track changes in source code, enabling collaboration and preserving the history of a project."
     },
     {
         "category": "Software Development",
-        "difficulty": "Advanced",
+        "difficulty": "Intermediate",
         "question": "In concurrent programming, what is a 'deadlock'?",
         "options": { "a": "A remote code execution vulnerability", "b": "A type of memory leak", "c": "A state where processes are blocked", "d": "A cryptographic error" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "A deadlock is a situation where two or more processes are blocked forever, each waiting for the other to release a resource."
     },
     {
         "category": "Software Development",
-        "difficulty": "Expert",
+        "difficulty": "Advanced",
         "question": "What is a primary advantage of a 'microservices' architecture?",
         "options": { "a": "It simplifies database management", "b": "It allows independent service deployment", "c": "It reduces overall network traffic", "d": "It has fewer points of failure" },
-        "answer": "b"
+        "answer": "b",
+        "explanation": "Microservices allow for independent development, deployment, and scaling of individual components of an application."
     },
     {
         "category": "Software Development",
-        "difficulty": "Expert",
+        "difficulty": "Advanced",
         "question": "Which 'SOLID' principle states that a class should have only one reason to change?",
         "options": { "a": "Open/Closed Principle", "b": "Single Responsibility", "c": "Liskov Substitution", "d": "Interface Segregation" },
-        "answer": "b"
+        "answer": "b",
+        "explanation": "The Single Responsibility Principle is a core design concept intended to make software designs more maintainable."
     },
     {
         "category": "Software Development",
-        "difficulty": "Expert",
+        "difficulty": "Advanced",
         "question": "What is the primary function of a message queue in a distributed system?",
         "options": { "a": "To enable asynchronous communication", "b": "To store long-term user data", "c": "To serve as a primary web server", "d": "To cache frequently accessed data" },
-        "answer": "a"
+        "answer": "a",
+        "explanation": "A message queue decouples services by allowing them to communicate asynchronously, improving scalability and resilience."
+    },
+    {
+        "category": "Software Development",
+        "difficulty": "Advanced",
+        "question": "What is the purpose of 'unit testing' in software development?",
+        "options": { "a": "To test system component integration", "b": "To allow end-user usability testing", "c": "To measure application performance", "d": "To verify isolated parts of the code" },
+        "answer": "d",
+        "explanation": "Unit tests verify that individual, isolated components or functions of the software work as intended."
     },
     {
         "category": "Software Development",
         "difficulty": "Expert",
-        "question": "What is the purpose of 'unit testing' in software development?",
-        "options": { "a": "To test system component integration", "b": "To allow end-user usability testing", "c": "To measure application performance", "d": "To verify isolated parts of the code" },
-        "answer": "d"
+        "question": "An architect is designing a system that must handle millions of concurrent users. Which architectural pattern is best suited for this level of scalability?",
+        "options": { "a": "Monolithic architecture", "b": "Client-server architecture", "c": "Distributed systems architecture", "d": "Layered architecture" },
+        "answer": "c",
+        "explanation": "Distributed systems are designed to scale horizontally, making them ideal for handling massive concurrent loads."
+    },
+    {
+        "category": "Software Development",
+        "difficulty": "Expert",
+        "question": "What is the primary purpose of a 'design pattern' in software engineering?",
+        "options": { "a": "A specific algorithm for sorting data", "b": "A reusable solution to a commonly occurring problem within a given context in software design", "c": "A tool for automatically generating code", "d": "A method for testing software" },
+        "answer": "b",
+        "explanation": "Design patterns are well-tested, reusable solutions that help developers solve common problems in a standardized way."
+    },
+    {
+        "category": "Software Development",
+        "difficulty": "Expert",
+        "question": "A developer needs to ensure that only one instance of a particular class is ever created. Which design pattern should be used?",
+        "options": { "a": "Factory Pattern", "b": "Observer Pattern", "c": "Singleton Pattern", "d": "Decorator Pattern" },
+        "answer": "c",
+        "explanation": "The Singleton pattern ensures that a class has only one instance and provides a global point of access to it."
+    },
+    {
+        "category": "Software Development",
+        "difficulty": "Expert",
+        "question": "What is the primary benefit of 'dependency injection' in a large application?",
+        "options": { "a": "It increases the coupling between components", "b": "It makes the code harder to test", "c": "It decouples components, making them easier to manage, test, and reuse", "d": "It improves the performance of the application" },
+        "answer": "c",
+        "explanation": "Dependency injection is a design pattern that decouples components, which improves modularity and testability."
     },
     {
         "category": "Web Development",
         "difficulty": "Beginner",
-        "question": "What is the role of HTML in creating a website?",
-        "options": { "a": "To define page structure and content", "b": "To add interactivity and animations", "c": "To style the visual appearance", "d": "To manage server-side logic" },
-        "answer": "a"
-    },
-    {
-        "category": "Web Development",
-        "difficulty": "Beginner",
-        "question": "Which technology is primarily used to control the visual presentation and layout of a web page?",
-        "options": { "a": "HTML", "b": "CSS", "c": "JavaScript", "d": "Python" },
-        "answer": "b"
-    },
-    {
-        "category": "Web Development",
-        "difficulty": "Beginner",
-        "question": "Which HTML tag is used to create a hyperlink?",
-        "options": { "a": "<img>", "b": "<p>", "c": "<div>", "d": "<a>" },
-        "answer": "d"
-    },
-    {
-        "category": "Web Development",
-        "difficulty": "Beginner",
-        "question": "What is the primary role of JavaScript in web development?",
-        "options": { "a": "To structure the web page", "b": "To define colors and fonts", "c": "To enable user interactivity", "d": "To store data on the server" },
-        "answer": "c"
-    },
-    {
-        "category": "Web Development",
-        "difficulty": "Intermediate",
         "question": "What does the 'DOM' represent in a web browser?",
         "options": { "a": "A file format for images", "b": "A structured representation of HTML", "c": "A server-side database", "d": "A CSS styling methodology" },
-        "answer": "b"
+        "answer": "b",
+        "explanation": "The DOM (Document Object Model) is a programming interface for web documents, representing the page so that programs can change the document structure."
     },
     {
         "category": "Web Development",
-        "difficulty": "Intermediate",
+        "difficulty": "Beginner",
         "question": "What is the main goal of 'responsive web design'?",
         "options": { "a": "To make websites load faster", "b": "To ensure layouts adapt to screen sizes", "c": "To secure websites from attacks", "d": "To improve search engine ranking" },
-        "answer": "b"
+        "answer": "b",
+        "explanation": "Responsive design ensures that a website's layout and content adapt to provide an optimal experience on any device."
     },
     {
         "category": "Web Development",
-        "difficulty": "Intermediate",
+        "difficulty": "Beginner",
         "question": "A web application needs to fetch server data without a full page reload. Which technology is commonly used for this?",
         "options": { "a": "AJAX", "b": "CSS Media Queries", "c": "HTML Forms", "d": "FTP" },
-        "answer": "a"
+        "answer": "a",
+        "explanation": "AJAX (Asynchronous JavaScript and XML) allows web pages to be updated asynchronously by exchanging data with a web server."
+    },
+    {
+        "category": "Web Development",
+        "difficulty": "Beginner",
+        "question": "What is the purpose of a tool like 'npm' or 'yarn'?",
+        "options": { "a": "To edit code in the browser", "b": "To provide a web server", "c": "To manage project dependencies", "d": "To automatically write CSS" },
+        "answer": "c",
+        "explanation": "Package managers like npm and yarn are used to install and manage third-party libraries and project dependencies."
     },
     {
         "category": "Web Development",
         "difficulty": "Intermediate",
-        "question": "What is the purpose of a tool like 'npm' or 'yarn'?",
-        "options": { "a": "To edit code in the browser", "b": "To provide a web server", "c": "To manage project dependencies", "d": "To automatically write CSS" },
-        "answer": "c"
-    },
-    {
-        "category": "Web Development",
-        "difficulty": "Advanced",
         "question": "What is a key characteristic of a 'Single Page Application' (SPA)?",
         "options": { "a": "It has no JavaScript or CSS", "b": "It cannot use a backend server", "c": "It is not for mobile devices", "d": "It dynamically updates content" },
-        "answer": "d"
+        "answer": "d",
+        "explanation": "An SPA loads a single HTML page and dynamically updates content as the user interacts with the app, providing a fluid experience."
     },
     {
         "category": "Web Development",
-        "difficulty": "Advanced",
+        "difficulty": "Intermediate",
         "question": "What is the primary benefit of using a JavaScript framework like React or Vue.js?",
         "options": { "a": "They eliminate the need for HTML", "b": "They provide a way to build component-based UIs", "c": "They automatically secure the application", "d": "They are only for static websites" },
-        "answer": "b"
+        "answer": "b",
+        "explanation": "Frameworks like React and Vue.js provide a structured and efficient way to build complex, reusable user interface components."
     },
     {
         "category": "Web Development",
-        "difficulty": "Advanced",
+        "difficulty": "Intermediate",
         "question": "A developer wants to prevent malicious scripts from being injected and run in their web application. Which vulnerability are they mitigating?",
         "options": { "a": "SQL Injection", "b": "CSRF", "c": "Cross-Site Scripting (XSS)", "d": "DoS" },
-        "answer": "c"
+        "answer": "c",
+        "explanation": "XSS is a security vulnerability that allows an attacker to inject malicious scripts into a web page viewed by other users."
+    },
+    {
+        "category": "Web Development",
+        "difficulty": "Intermediate",
+        "question": "What is the primary role of a 'bundler' like Webpack or Vite in a modern web development workflow?",
+        "options": { "a": "To provide real-time spell checking", "b": "To process and optimize assets for the browser", "c": "To manage user authentication", "d": "To create and manage databases" },
+        "answer": "b",
+        "explanation": "A bundler processes JavaScript modules and other assets into optimized files that a web browser can understand."
     },
     {
         "category": "Web Development",
         "difficulty": "Advanced",
-        "question": "What is the primary role of a 'bundler' like Webpack or Vite in a modern web development workflow?",
-        "options": { "a": "To provide real-time spell checking", "b": "To process and optimize assets for the browser", "c": "To manage user authentication", "d": "To create and manage databases" },
-        "answer": "b"
-    },
-    {
-        "category": "Web Development",
-        "difficulty": "Expert",
         "question": "What is a primary advantage of Server-Side Rendering (SSR) over Client-Side Rendering (CSR)?",
         "options": { "a": "It provides a richer user experience", "b": "It can improve initial page load and SEO", "c": "It reduces the server load", "d": "It eliminates the need for JavaScript" },
-        "answer": "b"
+        "answer": "b",
+        "explanation": "SSR sends a fully rendered page from the server, which can improve performance and make content more easily indexable by search engines."
     },
     {
         "category": "Web Development",
-        "difficulty": "Expert",
+        "difficulty": "Advanced",
         "question": "What is the main function of a 'Content Delivery Network' (CDN)?",
         "options": { "a": "To host dynamic backend logic", "b": "To cache and serve static assets", "c": "To provide a secure developer VPN", "d": "To manage the application database" },
-        "answer": "b"
+        "answer": "b",
+        "explanation": "A CDN distributes static assets to servers around the world, allowing users to download them from a geographically closer location."
     },
     {
         "category": "Web Development",
-        "difficulty": "Expert",
+        "difficulty": "Advanced",
         "question": "In a frontend framework like React, what does the term 'state' refer to?",
         "options": { "a": "The final, compiled application", "b": "A data structure that holds component info", "c": "The geographical location of the server", "d": "A CSS file for component styles" },
-        "answer": "b"
+        "answer": "b",
+        "explanation": "State is a JavaScript object that holds data about a component, which determines how it renders and behaves over time."
+    },
+    {
+        "category": "Web Development",
+        "difficulty": "Advanced",
+        "question": "In the context of a JavaScript module bundler, what is 'tree shaking'?",
+        "options": { "a": "A debugging process", "b": "An optimization to eliminate unused code", "c": "A visual animation effect", "d": "A method for organizing project files" },
+        "answer": "b",
+        "explanation": "Tree shaking is a form of dead code elimination that removes unused code from the final bundle to reduce its size."
     },
     {
         "category": "Web Development",
         "difficulty": "Expert",
-        "question": "In the context of a JavaScript module bundler, what is 'tree shaking'?",
-        "options": { "a": "A debugging process", "b": "An optimization to eliminate unused code", "c": "A visual animation effect", "d": "A method for organizing project files" },
-        "answer": "b"
+        "question": "An architect is designing a web application that requires real-time, bidirectional communication between the client and server. Which technology is best suited for this?",
+        "options": { "a": "HTTP/1.1", "b": "REST APIs", "c": "WebSockets", "d": "SOAP" },
+        "answer": "c",
+        "explanation": "WebSockets provide a persistent, full-duplex communication channel over a single TCP connection, ideal for real-time applications."
+    },
+    {
+        "category": "Web Development",
+        "difficulty": "Expert",
+        "question": "What is the primary purpose of 'code splitting' in a modern web application?",
+        "options": { "a": "To divide the code into multiple files for easier reading", "b": "To break up the application's JavaScript bundle into smaller chunks that can be loaded on demand", "c": "To run different parts of the code on different servers", "d": "To secure the application by hiding parts of the code" },
+        "answer": "b",
+        "explanation": "Code splitting is a technique used to create smaller bundles that can be lazy-loaded, improving initial page load performance."
+    },
+    {
+        "category": "Web Development",
+        "difficulty": "Expert",
+        "question": "A developer needs to prevent an attacker from forcing a logged-in user's browser to send a forged HTTP request to their site. Which vulnerability are they mitigating?",
+        "options": { "a": "Cross-Site Scripting (XSS)", "b": "SQL Injection", "c": "Cross-Site Request Forgery (CSRF)", "d": "Clickjacking" },
+        "answer": "c",
+        "explanation": "CSRF is an attack that tricks a user into submitting a malicious request, which can be mitigated with anti-CSRF tokens."
+    },
+    {
+        "category": "Web Development",
+        "difficulty": "Expert",
+        "question": "What is the primary benefit of using a GraphQL API over a traditional REST API?",
+        "options": { "a": "It is faster for all types of requests", "b": "It allows clients to request only the specific data they need, preventing over-fetching", "c": "It is more secure by default", "d": "It does not require a network connection" },
+        "answer": "b",
+        "explanation": "GraphQL allows clients to define the structure of the data they require, preventing the over-fetching common in REST APIs."
     }
 ]
